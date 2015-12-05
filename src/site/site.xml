@@ -57,6 +57,8 @@
 		<menu name="Documentation" inherit="bottom">
 			<item name="Acquire" href="./acquire.html" />
 			<item name="Usage" href="./usage.html" />
+            <item name="Build validation" href="./build_validation.html" />
+            <item name="Site reports" href="./site_reports.html" />
 		</menu>
 		<menu name="Info and reports" inherit="bottom">
 			<item name="Info" href="./info.html" />
