@@ -22,7 +22,7 @@ if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION
 
    echo "Deploying Maven site"
 
-   mvn site site:deploy -P deployment,config --settings ~/settings.xml
+   mvn site site:deploy -P deployment,site,config --settings ~/settings.xml
    
    exit 0
 
