@@ -3,7 +3,7 @@
 Basic POM for reusing on Maven-based Java projects.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven/base-pom.svg)][maven-repo]
-[![Bintray](https://api.bintray.com/packages/Bernardo-MG/maven/base-pom/images/download.svg)][bintray-repo]
+[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -68,7 +68,7 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 
 The project has been released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/Bernardo-MG/maven/base-pom/view
+[bintray-repo]: https://bintray.com/bernardo-mg/maven/base-pom/view
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.maven/base-pom
 [issues]: https://github.com/Bernardo-MG/base-pom/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
