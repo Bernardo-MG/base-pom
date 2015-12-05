@@ -201,6 +201,16 @@
             <properties>
                 <!-- Tests are skipped -->
                 <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
+        <profile>
+            <!-- Configuration profile -->
+            <!-- For configuration data which should not be inherited -->
+            <id>config</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
                 <!-- Manifest data -->
                 <manifest.name>com/wandrell/maven/pom/base</manifest.name>
             </properties>
