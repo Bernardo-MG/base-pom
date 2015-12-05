@@ -403,34 +403,6 @@
                                     <banSnapshots>true</banSnapshots>
                                     <phases>clean,deploy,site,test,verify</phases>
                                 </requirePluginVersions>
-                                <!-- Source encoding should be set. -->
-                                <requireProperty>
-                                    <property>project.build.sourceEncoding</property>
-                                    <message><![CDATA[Indicate the source encoding for the project.]]></message>
-                                    <regex>.*</regex>
-                                    <regexMessage><![CDATA[It should be a valid text encoding format.]]></regexMessage>
-                                </requireProperty>
-                                <!-- Report output encoding should be set. -->
-                                <requireProperty>
-                                    <property>project.reporting.outputEncoding</property>
-                                    <message><![CDATA[Indicate the encoding for the reporting output.]]></message>
-                                    <regex>.*</regex>
-                                    <regexMessage><![CDATA[It should be a valid text encoding format.]]></regexMessage>
-                                </requireProperty>
-                                <!-- Source JDK should be set. -->
-                                <requireProperty>
-                                    <property>maven.compiler.source</property>
-                                    <message>Indicate the source JDK.</message>
-                                    <regex>\d+\.\d+[\.\d+]?.*</regex>
-                                    <regexMessage><![CDATA[It should be a valid JDK version.]]></regexMessage>
-                                </requireProperty>
-                                <!-- Target JDK should be set. -->
-                                <requireProperty>
-                                    <property>maven.compiler.target</property>
-                                    <message>Indicate the target JDK.</message>
-                                    <regex>\d+\.\d+[\.\d+]?.*</regex>
-                                    <regexMessage><![CDATA[It should be a valid JDK version.]]></regexMessage>
-                                </requireProperty>
                                 <!-- Manifest name should be given. -->
                                 <requireProperty>
                                     <property>manifest.name</property>
