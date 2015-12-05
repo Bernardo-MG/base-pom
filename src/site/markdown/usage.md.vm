@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+${symbol_pound} Usage
+
+The POM can be used as the parent POM for any Maven project.
+
+To do this just add the following lines:
+
+```xml
+<parent>
+    <groupId>com.wandrell.maven</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>$project.version</version>
+</parent>
+```

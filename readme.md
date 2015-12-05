@@ -26,25 +26,22 @@ $ mvn verify
 
 ## Usage
 
-The application is coded in Java, using Maven to manage the project.
+The application is a XML file, a Maven POM file.
 
 ### Prerequisites
 
-The project has been tested on the following Java versions:
-* JDK 7
-* JDK 8
-* OpenJDK 7
-
-All other dependencies are handled through Maven, and noted in the included POM file.
+The project is meant to be used with Maven.
 
 ### Installing
 
-The recommended way to install the project is by setting up your preferred dependencies manager. To get the configuration information for this check the [Bintray repository][bintray-repo], or the [Maven Central Repository][maven-repo].
-
-If for some reason manual installation is necessary, just use the following Maven command:
+The POM can be used by just adding the following lines to the Maven POM:
 
 ```
-$ mvn install
+<parent>
+    <groupId>com.wandrell.maven</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>(Check POM or badges)</version>
+</parent>
 ```
 
 ## Collaborate
