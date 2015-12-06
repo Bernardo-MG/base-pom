@@ -21,7 +21,7 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
 ```
-$ mvn verify
+$ mvn site
 ```
 
 ## Usage
@@ -30,11 +30,11 @@ The application is a XML file, a Maven POM file.
 
 ### Prerequisites
 
-The project is meant to be used with Maven.
+Maven is required for the base POM.
 
 ### Installing
 
-The POM can be used by just adding the following lines to the Maven POM:
+The POM can be used by just adding the following lines to the Maven POM for your project:
 
 ```
 <parent>
