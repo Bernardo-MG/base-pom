@@ -132,6 +132,7 @@
             <id>site</id>
             <properties>
                 <!-- Plugins -->
+                <plugin.changes.version>2.11</plugin.changes.version>
                 <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
                 <!-- Maven Site -->
                 <site.skin.version>0.2.1</site.skin.version>
@@ -166,6 +167,35 @@
                                 <version>${plugin.site.velocity.version}</version>
                             </dependency>
                         </dependencies>
+                    </plugin>
+                    <plugin>
+                        <!-- Changes -->
+                        <!-- Takes care of the changes log -->
+                        <!-- It is set to also validate the changes log file -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-changes-plugin</artifactId>
+                        <version>${plugin.changes.version}</version>
+                        <executions>
+                            <!-- Changes plugin is bound to the pre-site 
+                                phase -->
+                            <execution>
+                                <id>check-changes</id>
+                                <phase>pre-site</phase>
+                                <goals>
+                                    <goal>changes-check</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>validate-changes</id>
+                                <phase>pre-site</phase>
+                                <goals>
+                                    <goal>changes-validate</goal>
+                                </goals>
+                                <configuration>
+                                    <failOnError>true</failOnError>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -253,16 +283,10 @@
         <!-- Java version -->
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-        <!-- Dependencies versions -->
-        <guava.version>18.0</guava.version>
-        <log4j.version>2.4.1</log4j.version>
-        <mockito.version>1.10.19</mockito.version>
-        <testng.version>6.9.9</testng.version>
         <!-- Plugins versions -->
         <plugin.ant.version>1.8</plugin.ant.version>
         <plugin.assembly.version>2.6</plugin.assembly.version>
         <plugin.checkstyle.version>2.16</plugin.checkstyle.version>
-        <plugin.changes.version>2.11</plugin.changes.version>
         <plugin.clean.version>3.0.0</plugin.clean.version>
         <plugin.compiler.version>3.3</plugin.compiler.version>
         <plugin.dependency.version>2.10</plugin.dependency.version>
@@ -559,34 +583,6 @@
                             <generatePom>true</generatePom>
                             <url>${project.distributionManagement.repository.url}</url>
                             <file>${project.build.directory}/${project.build.finalName}.jar</file>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <!-- Changes -->
-                <!-- Takes care of the changes log -->
-                <!-- It is set to also validate the changes log file -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-changes-plugin</artifactId>
-                <version>${plugin.changes.version}</version>
-                <executions>
-                    <!-- Changes plugin is bound to the pre-site phase -->
-                    <execution>
-                        <id>check-changes</id>
-                        <phase>pre-site</phase>
-                        <goals>
-                            <goal>changes-check</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>validate-changes</id>
-                        <phase>pre-site</phase>
-                        <goals>
-                            <goal>changes-validate</goal>
-                        </goals>
-                        <configuration>
-                            <failOnError>true</failOnError>
                         </configuration>
                     </execution>
                 </executions>

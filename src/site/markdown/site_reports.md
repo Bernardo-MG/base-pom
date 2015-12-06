@@ -8,7 +8,6 @@ Maven, thanks to several plugins, allows generating a full array of tests which 
 
 The following reports come included in the new project and will be added to the site:
 
-- [Changes](https://maven.apache.org/plugins/maven-changes-plugin/)
 - [Tag list](http://www.mojohaus.org)
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/)
 - [FindBugs](http://gleclaire.github.io/findbugs-maven-plugin/)

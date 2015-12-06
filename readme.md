@@ -1,12 +1,21 @@
 # Wandrell's Base POM
 
-Basic POM for reusing on Maven-based Java projects.
+Basic POM to ease the creation of new Java project. It prepares several plugins and the general Maven configuration using common and recommended options.
+
+This POM can be used as a parent for any type of Java project, but mainly is meant for generic libraries, as it lacks concrete configuration for any specific framework or technology.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven/base-pom.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
+
+## Features
+
+- Prepared to reduce the configuration needed for new Maven-based Java projects.
+- Sets up the encoding and Java version of the project for all the plugins.
+- Adds some basic validation rules, including dependency convergence.
+- Adds some basic configuration, such as a default manifest file.
 
 ## Documentation
 

@@ -40,10 +40,6 @@ Some of the [reports][reports] included for the Maven site will indicate possibl
 
 While a few of these problems can be important, and probably should be fixed before any release, the plugins are not set to stop the build when they are found. Still, if needed the plugins can be set up to ensure all these verifications pass, and stop the build if they don't.
 
-### Changes report
-
-The changes report will stop the building if the date or version are invalid. This means just that they should be coherent, so a new update can't happen before the latest, for example.
-
 [enforcer-plugin]: https://maven.apache.org/enforcer/maven-enforcer-plugin/
 
 [reports]: ./site_reports.html
