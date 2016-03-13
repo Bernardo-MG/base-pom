@@ -12,6 +12,9 @@
         </release>
         <release version="0.1.1" date="2016-3-13" description="Enforcer rules changes">
             <action dev="bmg" type="update">
+                Divided the enforcer execution into one for each rule.
+            </action>
+            <action dev="bmg" type="update">
                 The version enforcer rule is now based
                 on the Java version set for the project.
             </action>
