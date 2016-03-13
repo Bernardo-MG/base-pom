@@ -10,11 +10,7 @@
 
     <groupId>com.wandrell.maven</groupId>
     <artifactId>base-pom</artifactId>
-<<<<<<< HEAD
     <version>0.1.1</version>
-=======
-    <version>0.1.0</version>
->>>>>>> refs/heads/master
     <packaging>pom</packaging>
 
     <name>Wandrell's base POM</name>
