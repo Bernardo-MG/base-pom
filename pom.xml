@@ -419,7 +419,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>enforce-upperBounds</id>
+                        <id>enforce-convergence</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>

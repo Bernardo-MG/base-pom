@@ -34,6 +34,43 @@ The following properties are required to be set as part of the POM properties:
 |---|---|
 |manifest.name|Name for the manifest|
 
+## Overriding enforcer rules
+
+Each validation rule is bound to a different execution, each with its own id, so they can be overriden easily:
+
+|Rule|Id|
+|---|---|
+|Dependencies convergence|enforce-convergence|
+|Required Java version|enforce-javaVersion|
+|Plugin versions|enforce-pluginVersion|
+|Manifest|enforce-manifest|
+
+To override them, just add a plugin configuration similar to this:
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-enforcer-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>enforce-javaVersion</id>
+            <goals>
+                <goal>enforce</goal>
+            </goals>
+            <configuration>
+                <rules>
+                    <requireJavaVersion>
+                        <version>${java.version}</version>
+                    </requireJavaVersion>
+                </rules>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+Where 'java.version' is a new property, used to override the default configuration.
+
 ## Additional verifications
 
 Some of the [reports][reports] included for the Maven site will indicate possible problems to fix and correct. 
