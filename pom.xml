@@ -10,7 +10,7 @@
 
     <groupId>com.wandrell.maven</groupId>
     <artifactId>base-pom</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>pom</packaging>
 
     <name>Wandrell's base POM</name>
@@ -135,7 +135,7 @@
                 <plugin.changes.version>2.11</plugin.changes.version>
                 <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
                 <!-- Maven Site -->
-                <site.skin.version>0.2.1</site.skin.version>
+                <site.skin.version>0.2.4</site.skin.version>
                 <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
                 <mavenURL>http://mvnrepository.com/artifact/com.wandrell/base-pom</mavenURL>
             </properties>
@@ -403,9 +403,23 @@
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>${plugin.enforcer.version}</version>
                 <executions>
-                    <!-- The enforcer is bound to the validate phase -->
+                    <!-- The enforce goal is bound to the validate phase -->
                     <execution>
-                        <id>enforce</id>
+                        <id>enforce-javaVersion</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- Not obsolete JDK. -->
+                                <requireJavaVersion>
+                                    <version>[${maven.compiler.source},)</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-convergence</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
@@ -415,10 +429,16 @@
                                 <!-- This variant of the rule requires less 
                                     configuration, making use of Maven's dependency resolver. -->
                                 <requireUpperBoundDeps />
-                                <!-- Not obsolete JDK. -->
-                                <requireJavaVersion>
-                                    <version>[1.7,)</version>
-                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-pluginVersion</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
                                 <!-- No plugin without version. -->
                                 <requirePluginVersions>
                                     <message><![CDATA[Best Practice is to always define plugin versions.]]></message>
@@ -427,6 +447,16 @@
                                     <banSnapshots>true</banSnapshots>
                                     <phases>clean,deploy,site,test,verify</phases>
                                 </requirePluginVersions>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-manifest</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
                                 <!-- Manifest name should be given. -->
                                 <requireProperty>
                                     <property>manifest.name</property>
