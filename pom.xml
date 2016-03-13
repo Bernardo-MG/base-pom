@@ -10,7 +10,7 @@
 
     <groupId>com.wandrell.maven</groupId>
     <artifactId>base-pom</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Wandrell's base POM</name>
@@ -417,7 +417,7 @@
                                 <requireUpperBoundDeps />
                                 <!-- Not obsolete JDK. -->
                                 <requireJavaVersion>
-                                    <version>[1.7,)</version>
+                                    <version>[${maven.compiler.source},)</version>
                                 </requireJavaVersion>
                                 <!-- No plugin without version. -->
                                 <requirePluginVersions>
