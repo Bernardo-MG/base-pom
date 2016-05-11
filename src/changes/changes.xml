@@ -19,9 +19,12 @@
                 on the Java version set for the project.
             </action>
         </release>
-        <release version="1.0.0" date="2016-5-10" description="First release">
+        <release version="1.0.0" date="2016-5-11" description="First release">
             <action dev="bmg" type="update">
                 Set as first release.
+            </action>
+            <action dev="bmg" type="update">
+                Updated plugins.
             </action>
             <action dev="bmg" type="add">
                 Extended documentation.
