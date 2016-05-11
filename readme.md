@@ -1,8 +1,12 @@
 # Wandrell's Base POM
 
-Basic POM to ease the creation of new Java project. It prepares several plugins and the general Maven configuration using common and recommended options.
+Basic POM take care of setting up common configuration. It prepares several plugins, both build and report ones, along a bunch of useful configuration options, based on good practices.
 
-This POM can be used as a parent for any type of Java project, but mainly is meant for generic libraries, as it lacks concrete configuration for any specific framework or technology.
+Some of these features include things such as plugins for testing, or for dependency convergence.
+
+It is meant to be a generic base POM, useful for any kind of project, no matter what actual technologies they take advantage of, as long as it is a Maven based Java project.
+
+More information about this can be found in the [introduction to the Maven POM][maven-pom-intro].
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven/base-pom.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
@@ -12,10 +16,11 @@ This POM can be used as a parent for any type of Java project, but mainly is mea
 
 ## Features
 
-- Prepared to reduce the configuration needed for new Maven-based Java projects.
-- Sets up the encoding and Java version of the project for all the plugins.
-- Adds some basic validation rules, including dependency convergence.
-- Adds some basic configuration, such as a default manifest file.
+- Reduces the need to set up new Maven-based Java projects.
+- Sets up the encoding and Java version of the project.
+- Common build and report plugins.
+- Validation rules, including dependency convergence.
+- Basic configuration, such as a default manifest file.
 
 ## Documentation
 
@@ -77,6 +82,8 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 
 The project has been released under the [MIT License][license].
+
+[maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
 
 [bintray-repo]: https://bintray.com/bernardo-mg/maven/base-pom/view
 [maven-repo]: http://mvnrepository.com/artifact/com.wandrell.maven/base-pom
