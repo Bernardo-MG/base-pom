@@ -303,7 +303,7 @@
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
       <plugin.resources.version>2.7</plugin.resources.version>
-      <plugin.site.version>3.5.1</plugin.site.version>
+      <plugin.site.version>3.4</plugin.site.version>
       <plugin.source.version>3.0.0</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
