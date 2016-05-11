@@ -136,7 +136,7 @@
             <!-- Maven Site -->
             <site.skin.version>0.2.4</site.skin.version>
             <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
-            <mavenURL>http://mvnrepository.com/artifact/com.wandrell/base-pom</mavenURL>
+            <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
          </properties>
          <distributionManagement>
             <site>
