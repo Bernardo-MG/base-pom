@@ -270,13 +270,19 @@
    <!-- ********************************************** -->
 
    <properties>
-      <!-- Encoding -->
+      <!-- ============================================== -->
+      <!-- ================== ENCODING ================== -->
+      <!-- ============================================== -->
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-      <!-- Java version -->
+      <!-- ============================================== -->
+      <!-- ================ JAVA VERSION ================ -->
+      <!-- ============================================== -->
       <maven.compiler.source>1.7</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-      <!-- Plugins versions -->
+      <!-- ============================================== -->
+      <!-- ============== PLUGINS VERSIONS ============== -->
+      <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
       <plugin.assembly.version>2.6</plugin.assembly.version>
       <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
@@ -302,7 +308,9 @@
       <plugin.source.version>3.0.0</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
-      <!-- Extensions versions -->
+      <!-- ============================================== -->
+      <!-- ============= EXTENSIONS VERSIONS ============ -->
+      <!-- ============================================== -->
       <extension.wagon.version>2.10</extension.wagon.version>
    </properties>
 
