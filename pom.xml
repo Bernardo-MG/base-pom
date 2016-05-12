@@ -194,8 +194,8 @@
             </build>
         </profile>
         <profile>
-            <!-- Site release deployment profile -->
-            <!-- Sets the site repository to point to the releases repo -->
+            <!-- Site release deployment profile. -->
+            <!-- Sets the site repository to point to the releases repo. -->
             <id>deploy-site-release</id>
             <distributionManagement>
                 <site>
@@ -206,8 +206,8 @@
             </distributionManagement>
         </profile>
         <profile>
-            <!-- Development site deployment profile -->
-            <!-- Sets the site repository to point to the development repo -->
+            <!-- Site development deployment profile. -->
+            <!-- Sets the site repository to point to the development repo. -->
             <id>deploy-site-development</id>
             <distributionManagement>
                 <site>
@@ -218,8 +218,8 @@
             </distributionManagement>
         </profile>
         <profile>
-            <!-- Deployment profile -->
-            <!-- Sets ups the environment for deployment -->
+            <!-- Deployment profile. -->
+            <!-- Sets ups the environment for deployment. -->
             <id>deployment</id>
             <properties>
                 <!-- Tests are skipped -->

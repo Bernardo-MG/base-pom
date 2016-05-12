@@ -23,7 +23,7 @@ if [ "$DEPLOY" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION_TYPE
 
    echo "Deploying Java artifact"
 
-   mvn deploy -P deployment --settings ~/settings.xml
+   mvn deploy -P config,deployment --settings ~/settings.xml
 
    exit 0
 

@@ -23,7 +23,7 @@ if [ "$DEPLOY_DOCS" == "true" ] && [ "$PULL_REQUEST" == "false" ] && [ "$VERSION
 
    echo "Deploying Maven site"
 
-   mvn site site:deploy -P deployment --settings ~/settings.xml > site_output.txt
+   mvn site site:deploy -P site,config,deployment --settings ~/settings.xml > site_output.txt
 
    head -50 site_output.txt
    echo " "
