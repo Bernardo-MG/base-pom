@@ -33,5 +33,10 @@
                 Added a list of the plugins to the documentation.
             </action>
         </release>
+        <release version="1.0.1" date="2016-5-11" description="CI updates">
+            <action dev="bmg" type="update">
+                Updated CI scripts.
+            </action>
+        </release>
     </body>
 </document>
