@@ -37,6 +37,9 @@
             <action dev="bmg" type="update">
                 Updated CI scripts.
             </action>
+            <action dev="bmg" type="update">
+                Updated dependencies.
+            </action>
         </release>
     </body>
 </document>

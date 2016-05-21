@@ -295,7 +295,7 @@
       <plugin.findbugs.version>3.0.3</plugin.findbugs.version>
       <plugin.install.version>2.5.2</plugin.install.version>
       <plugin.jacoco.version>0.7.6.201602180812</plugin.jacoco.version>
-      <plugin.jar.version>2.6</plugin.jar.version>
+      <plugin.jar.version>3.0.0</plugin.jar.version>
       <plugin.javadoc.version>2.10.3</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>2.5</plugin.jxr.version>
@@ -303,7 +303,7 @@
       <plugin.pmd.version>3.6</plugin.pmd.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
-      <plugin.resources.version>2.7</plugin.resources.version>
+      <plugin.resources.version>3.0.0</plugin.resources.version>
       <plugin.site.version>3.4</plugin.site.version>
       <plugin.source.version>3.0.0</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
