@@ -10,7 +10,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.2</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -129,7 +129,7 @@
                 <plugin.changes.version>2.12</plugin.changes.version>
                 <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
                 <!-- Maven Site -->
-                <site.skin.version>0.2.4</site.skin.version>
+                <site.skin.version>0.3.0</site.skin.version>
                 <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
                 <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
             </properties>
