@@ -16,6 +16,10 @@ More information about this can be found in the [introduction to the Maven POM][
 - Deployment plugin prepared to deploy into the distribution management repo.
 - Manifest prepared with default configuration.
 
+## JDK support
+
+Only JDK 1.7 onward is supported. This is due to the plugins included in the POM.
+
 ## Archetype
 
 Sort of an extension to this project, the [Library Maven Archetype][library-archetype] makes use, and extends over, this POM.
