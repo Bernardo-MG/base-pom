@@ -8,6 +8,8 @@ It is meant to be a generic base POM, useful for any kind of project, no matter 
 
 More information about this can be found in the [introduction to the Maven POM][maven-pom-intro].
 
+**JDK support:** *the POM only supports JDK 1.7 onward, due to the plugins included.*
+
 [![Maven Central](https://img.shields.io/maven-central/v/com.wandrell.maven/base-pom.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
@@ -16,6 +18,7 @@ More information about this can be found in the [introduction to the Maven POM][
 
 ## Features
 
+- Support for JDK7 onward.
 - Reduces the need to set up new Maven-based Java projects.
 - Sets up the encoding and Java version of the project.
 - Common build and report plugins.
@@ -44,7 +47,13 @@ The application is a XML file, a Maven POM file.
 
 ### Prerequisites
 
-Maven is required for the base POM.
+The project has been tested on the following Java versions:
+* JDK 7
+* OpenJDK 7
+
+As a Maven parent POM, it also requires Maven.
+
+Additional dependencies, mostly plugins, will be handled automatically through Maven.
 
 ### Installing
 

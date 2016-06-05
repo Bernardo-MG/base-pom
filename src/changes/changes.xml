@@ -10,7 +10,7 @@
                 First release of the library.
             </action>
         </release>
-        <release version="0.1.1" date="2016-3-13" description="Enforcer rules changes">
+        <release version="0.1.1" date="2016-03-13" description="Enforcer rules changes">
             <action dev="bmg" type="update">
                 Divided the enforcer execution into one for each rule.
             </action>
@@ -19,7 +19,7 @@
                 on the Java version set for the project.
             </action>
         </release>
-        <release version="1.0.0" date="2016-5-11" description="First release">
+        <release version="1.0.0" date="2016-05-11" description="First release">
             <action dev="bmg" type="update">
                 Set as first release.
             </action>
@@ -33,7 +33,7 @@
                 Added a list of the plugins to the documentation.
             </action>
         </release>
-        <release version="1.0.1" date="2016-5-21" description="CI updates">
+        <release version="1.0.1" date="2016-05-21" description="CI updates">
             <action dev="bmg" type="update">
                 Updated CI scripts.
             </action>
@@ -41,9 +41,17 @@
                 Updated dependencies.
             </action>
         </release>
-        <release version="1.0.2" date="2016-5-31" description="Updated Maven Skin">
+        <release version="1.0.2" date="2016-05-31" description="Updated Maven Skin">
             <action dev="bmg" type="update">
                 Updated Maven Skin.
+            </action>
+        </release>
+        <release version="1.0.3" date="2016-06-05" description="JDK notice">
+            <action dev="bmg" type="update">
+                Added a notice about the JDK version supported.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected the plugin report colliding with the plugins info.
             </action>
         </release>
     </body>
