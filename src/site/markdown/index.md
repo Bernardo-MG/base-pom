@@ -32,4 +32,4 @@ It gives several examples and hints about how to add over what the Base POM offe
 
 [build-validation]: ./build_validation.html
 [site-reports]: ./site_reports.html
-[plugins-list]: ./plugins-list.html
+[plugins-list]: ./plugins_list.html
