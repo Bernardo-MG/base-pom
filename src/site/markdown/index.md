@@ -12,7 +12,7 @@ More information about this can be found in the [introduction to the Maven POM][
 - Sets the JDK version (Java 1.7 by default) to be used by the project.
 - [Build validation][build-validation].
 - [Maven Site reports][site-reports] added for the project.
-- Common build and report plugins.
+- Common build and report [plugins][plugins-list].
 - Deployment plugin prepared to deploy into the distribution management repo.
 - Manifest prepared with default configuration.
 
@@ -30,5 +30,6 @@ It gives several examples and hints about how to add over what the Base POM offe
 
 [library-archetype]: https://github.com/Bernardo-MG/library-maven-archetype
 
-[build-validation]: build_validation.html
-[site-reports]: site_reports.html
+[build-validation]: ./build_validation.html
+[site-reports]: ./site_reports.html
+[plugins-list]: ./plugins-list.html

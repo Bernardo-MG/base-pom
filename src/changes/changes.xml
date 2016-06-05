@@ -46,9 +46,12 @@
                 Updated Maven Skin.
             </action>
         </release>
-        <release version="1.0.3" date="2016-06-01" description="JDK notice">
+        <release version="1.0.3" date="2016-06-05" description="JDK notice">
             <action dev="bmg" type="update">
                 Added a notice about the JDK version supported.
+            </action>
+            <action dev="bmg" type="fix">
+                Corrected the plugin report colliding with the plugins info.
             </action>
         </release>
     </body>

@@ -45,7 +45,7 @@
       <menu name="Documentation" inherit="bottom">
          <item name="Acquire" href="./acquire.html" />
          <item name="Usage" href="./usage.html" />
-         <item name="Plugins" href="./plugins.html" />
+         <item name="Plugins" href="./plugins_list.html" />
          <item name="Build validation" href="./build_validation.html" />
          <item name="Site reports" href="./site_reports.html" />
       </menu>
