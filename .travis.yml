@@ -33,6 +33,6 @@ script:
   - mvn clean verify
 after_success:
   # Documentation deployment script
-  - ~/.scripts/java/maven/deploy-site.sh $DO_DEPLOY_DOCS deployment,config
+  - ~/.scripts/java/maven/deploy-site.sh $DO_DEPLOY_DOCS deployment,config,site
   # Code artifacts deployment script
-  - ~/.scripts/java/maven/deploy.sh $DO_DEPLOY deployment,config,site
+  - ~/.scripts/java/maven/deploy.sh $DO_DEPLOY deployment,config
