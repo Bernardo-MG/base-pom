@@ -1,12 +1,8 @@
 # Wandrell's Base POM
 
-Basic POM take care of setting up common configuration. It prepares several plugins, both build and report ones, along a bunch of useful configuration options, based on good practices.
+Basic [Maven POM][maven-pom-intro] take care of setting up common configuration. It prepares several build and report plugins for the project, and also sets it up with a configuration based on various good practices, such as testing or dependency convergence.
 
-Some of these features include things such as plugins for testing, or for dependency convergence.
-
-It is meant to be a generic base POM, useful for any kind of project, no matter what actual technologies they take advantage of, as long as it is a Maven based Java project.
-
-More information about this can be found in the [introduction to the Maven POM][maven-pom-intro].
+But above all it is meant to be a generic base POM, useful for any kind of project, no matter what actual technologies they are based on.
 
 **JDK support:** *the POM only supports JDK 1.7 onward, due to the plugins included.*
 
@@ -19,6 +15,7 @@ More information about this can be found in the [introduction to the Maven POM][
 ## Features
 
 - Support for JDK7 onward.
+- Sets the project default encoding to UTF-8.
 - Reduces the need to set up new Maven-based Java projects.
 - Sets up the encoding and Java version of the project.
 - Common build and report plugins.
@@ -48,6 +45,7 @@ The application is a XML file, a Maven POM file.
 ### Prerequisites
 
 The project has been tested on the following Java versions:
+* JDK 8
 * JDK 7
 * OpenJDK 7
 
