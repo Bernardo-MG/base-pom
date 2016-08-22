@@ -14,7 +14,7 @@
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
-   <description>Generic base POM for Java projects.</description>
+   <description>Generic base POM for Maven-based Java projects.</description>
    <url>https://github.com/Bernardo-MG/base-pom</url>
    <inceptionYear>2015</inceptionYear>
 
