@@ -1,9 +1,14 @@
+# Travis CI Configuration file
+# @link https://travis-ci.org/
+
+# Using Java for the project
 language: java
 #jdk:
 # JDK 8 is set to deploy the docs in the configuration matrix
 #  - oraclejdk8
 # JDK 8 is set to deploy the artifacts in the configuration matrix
 #  - oraclejdk7
+  - openjdk7
 matrix:
   include:
     # Code artifacts deployed with JDK7

@@ -45,6 +45,7 @@ The application is a XML file, a Maven POM file.
 ### Prerequisites
 
 The project has been tested on the following Java versions:
+* JDK 8
 * JDK 7
 * OpenJDK 7
 
