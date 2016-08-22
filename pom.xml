@@ -67,178 +67,176 @@
    <!-- ****************** PROFILES ****************** -->
    <!-- ********************************************** -->
 
-    <profiles>
-        <profile>
-            <!-- Profile for the Eclipse Maven plugin. -->
-            <!-- Fixes the errors from unregistered goals. -->
-            <!-- It will be activated automatically on Eclipse if this has the m2e
-                plugin, by detecting the version property. -->
-            <id>eclipse-maven</id>
-            <activation>
-                <property>
-                    <name>m2e.version</name>
-                </property>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <!-- m2e lifecycle mapping. -->
-                            <!-- This is used to configure the Maven plugin for Eclipse. -->
-                            <!-- Among other things, it allows registering goals,
-                                which Eclipse would otherwise reject. -->
-                            <!-- It has no real effect on Maven. -->
-                            <groupId>org.eclipse.m2e</groupId>
-                            <artifactId>lifecycle-mapping</artifactId>
-                            <version>${plugin.lifecycle.version}</version>
-                            <configuration>
-                                <lifecycleMappingMetadata>
-                                    <pluginExecutions>
-                                        <pluginExecution>
-                                            <!-- JaCoCo plugin -->
-                                            <pluginExecutionFilter>
-                                                <groupId>org.jacoco</groupId>
-                                                <artifactId>jacoco-maven-plugin</artifactId>
-                                                <versionRange>[0.5,)</versionRange>
-                                                <goals>
-                                                    <!-- Registers goals into m2e. -->
-                                                    <goal>prepare-agent</goal>
-                                                </goals>
-                                            </pluginExecutionFilter>
-                                            <action>
-                                                <!-- Ignored to avoid error alerts. -->
-                                                <ignore />
-                                            </action>
-                                        </pluginExecution>
-                                    </pluginExecutions>
-                                </lifecycleMappingMetadata>
-                                <downloadSources>true</downloadSources>
-                                <downloadJavadocs>true</downloadJavadocs>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-        <profile>
-            <!-- Site generation profile. -->
-            <!-- Sets the dependencies for the documentation generation and deployment. -->
-            <id>site</id>
-            <properties>
-                <!-- Plugins -->
-                <plugin.changes.version>2.12</plugin.changes.version>
-                <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
-                <!-- Maven Site -->
-                <site.skin.version>0.3.0</site.skin.version>
-                <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
-                <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
-            </properties>
-            <distributionManagement>
-                <site>
-                    <id>site</id>
-                    <name>Project Documentation Site</name>
-                    <url>ftp://docs.wandrell.com/java-patterns</url>
-                </site>
-            </distributionManagement>
-            <build>
-                <plugins>
-                    <plugin>
-                        <!-- Site -->
-                        <!-- Generates the Maven Site -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-site-plugin</artifactId>
-                        <dependencies>
-                            <dependency>
-                                <!-- Docs Maven Skin -->
-                                <groupId>com.wandrell.maven.skins</groupId>
-                                <artifactId>docs-maven-skin</artifactId>
-                                <version>${site.skin.version}</version>
-                            </dependency>
-                            <dependency>
-                                <!-- Velocity -->
-                                <groupId>org.apache.velocity</groupId>
-                                <artifactId>velocity</artifactId>
-                                <version>${plugin.site.velocity.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                    <plugin>
-                        <!-- Changes -->
-                        <!-- Takes care of the changes log. -->
-                        <!-- It is set to also validate the changes log file. -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-changes-plugin</artifactId>
-                        <version>${plugin.changes.version}</version>
-                        <executions>
-                            <!-- Changes plugin is bound to the pre-site phase -->
-                            <execution>
-                                <id>check-changes</id>
-                                <phase>pre-site</phase>
-                                <goals>
-                                    <goal>changes-check</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>validate-changes</id>
-                                <phase>pre-site</phase>
-                                <goals>
-                                    <goal>changes-validate</goal>
-                                </goals>
-                                <configuration>
-                                    <failOnError>true</failOnError>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <!-- Site release deployment profile. -->
-            <!-- Sets the site repository to point to the releases repo. -->
-            <id>deploy-site-release</id>
-            <distributionManagement>
-                <site>
-                    <id>site</id>
-                    <name>Project Documentation Site</name>
-                    <url>ftp://docs.wandrell.com/base-pom</url>
-                </site>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <!-- Site development deployment profile. -->
-            <!-- Sets the site repository to point to the development repo. -->
-            <id>deploy-site-development</id>
-            <distributionManagement>
-                <site>
-                    <id>site-development</id>
-                    <name>Project Development Documentation Site</name>
-                    <url>ftp://docs.wandrell.com/base-pom</url>
-                </site>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <!-- Deployment profile. -->
-            <!-- Sets ups the environment for deployment. -->
-            <id>deployment</id>
-            <properties>
-                <!-- Tests are skipped -->
-                <maven.test.skip>true</maven.test.skip>
-            </properties>
-        </profile>
-        <profile>
-            <!-- Configuration profile -->
-            <!-- For configuration data which should not be inherited -->
-            <id>config</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <!-- Manifest data -->
-                <manifest.name>com/wandrell/maven/pom/base</manifest.name>
-            </properties>
-        </profile>
-    </profiles>
+   <profiles>
+      <profile>
+         <!-- Profile for the Eclipse Maven plugin. -->
+         <!-- Fixes the errors from unregistered goals. -->
+         <!-- It will be activated automatically on Eclipse if this has the m2e plugin, 
+            by detecting the version property. -->
+         <id>eclipse-maven</id>
+         <activation>
+            <property>
+               <name>m2e.version</name>
+            </property>
+         </activation>
+         <build>
+            <pluginManagement>
+               <plugins>
+                  <plugin>
+                     <!-- m2e lifecycle mapping. -->
+                     <!-- This is used to configure the Maven plugin for Eclipse. -->
+                     <!-- Among other things, it allows registering goals, which 
+                        Eclipse would otherwise reject. -->
+                     <!-- It has no real effect on Maven. -->
+                     <groupId>org.eclipse.m2e</groupId>
+                     <artifactId>lifecycle-mapping</artifactId>
+                     <version>${plugin.lifecycle.version}</version>
+                     <configuration>
+                        <lifecycleMappingMetadata>
+                           <pluginExecutions>
+                              <pluginExecution>
+                                 <!-- JaCoCo plugin -->
+                                 <pluginExecutionFilter>
+                                    <groupId>org.jacoco</groupId>
+                                    <artifactId>jacoco-maven-plugin</artifactId>
+                                    <versionRange>[0.5,)</versionRange>
+                                    <goals>
+                                       <!-- Registers goals into m2e. -->
+                                       <goal>prepare-agent</goal>
+                                    </goals>
+                                 </pluginExecutionFilter>
+                                 <action>
+                                    <!-- Ignored to avoid error alerts. -->
+                                    <ignore />
+                                 </action>
+                              </pluginExecution>
+                           </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                        <downloadSources>true</downloadSources>
+                        <downloadJavadocs>true</downloadJavadocs>
+                     </configuration>
+                  </plugin>
+               </plugins>
+            </pluginManagement>
+         </build>
+      </profile>
+      <profile>
+         <!-- Site generation profile. -->
+         <!-- Sets the dependencies for the documentation generation and deployment. -->
+         <id>site</id>
+         <properties>
+            <!-- Plugins -->
+            <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
+            <!-- Maven Site -->
+            <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
+            <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
+         </properties>
+         <distributionManagement>
+            <site>
+               <id>site</id>
+               <name>Project Documentation Site</name>
+               <url>ftp://docs.wandrell.com/java-patterns</url>
+            </site>
+         </distributionManagement>
+         <build>
+            <plugins>
+               <plugin>
+                  <!-- Site -->
+                  <!-- Generates the Maven Site -->
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-site-plugin</artifactId>
+                  <dependencies>
+                     <dependency>
+                        <!-- Docs Maven Skin -->
+                        <groupId>com.wandrell.maven.skins</groupId>
+                        <artifactId>docs-maven-skin</artifactId>
+                        <version>${site.skin.version}</version>
+                     </dependency>
+                     <dependency>
+                        <!-- Velocity -->
+                        <groupId>org.apache.velocity</groupId>
+                        <artifactId>velocity</artifactId>
+                        <version>${plugin.site.velocity.version}</version>
+                     </dependency>
+                  </dependencies>
+               </plugin>
+               <plugin>
+                  <!-- Changes -->
+                  <!-- Takes care of the changes log. -->
+                  <!-- It is set to also validate the changes log file. -->
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-changes-plugin</artifactId>
+                  <version>${plugin.changes.version}</version>
+                  <executions>
+                     <!-- Changes plugin is bound to the pre-site phase -->
+                     <execution>
+                        <id>check-changes</id>
+                        <phase>pre-site</phase>
+                        <goals>
+                           <goal>changes-check</goal>
+                        </goals>
+                     </execution>
+                     <execution>
+                        <id>validate-changes</id>
+                        <phase>pre-site</phase>
+                        <goals>
+                           <goal>changes-validate</goal>
+                        </goals>
+                        <configuration>
+                           <failOnError>true</failOnError>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+      <profile>
+         <!-- Site release deployment profile. -->
+         <!-- Sets the site repository to point to the releases repo. -->
+         <id>deploy-site-release</id>
+         <distributionManagement>
+            <site>
+               <id>site</id>
+               <name>Project Documentation Site</name>
+               <url>ftp://docs.wandrell.com/base-pom</url>
+            </site>
+         </distributionManagement>
+      </profile>
+      <profile>
+         <!-- Site development deployment profile. -->
+         <!-- Sets the site repository to point to the development repo. -->
+         <id>deploy-site-development</id>
+         <distributionManagement>
+            <site>
+               <id>site-development</id>
+               <name>Project Development Documentation Site</name>
+               <url>ftp://docs.wandrell.com/base-pom</url>
+            </site>
+         </distributionManagement>
+      </profile>
+      <profile>
+         <!-- Deployment profile. -->
+         <!-- Sets ups the environment for deployment. -->
+         <id>deployment</id>
+         <properties>
+            <!-- Tests are skipped -->
+            <maven.test.skip>true</maven.test.skip>
+         </properties>
+      </profile>
+      <profile>
+         <!-- Configuration profile -->
+         <!-- For configuration data which should not be inherited -->
+         <id>config</id>
+         <activation>
+            <activeByDefault>true</activeByDefault>
+         </activation>
+         <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/wandrell/maven/pom/base</manifest.name>
+         </properties>
+      </profile>
+   </profiles>
 
    <!-- ********************************************** -->
    <!-- *********** ORGANIZATION AND MEMBERS ********* -->
@@ -285,6 +283,7 @@
       <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
       <plugin.assembly.version>2.6</plugin.assembly.version>
+      <plugin.changes.version>2.12</plugin.changes.version>
       <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
       <plugin.clean.version>3.0.0</plugin.clean.version>
       <plugin.compiler.version>3.5.1</plugin.compiler.version>
@@ -292,10 +291,10 @@
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
       <plugin.failsafe.version>2.19.1</plugin.failsafe.version>
-      <plugin.findbugs.version>3.0.3</plugin.findbugs.version>
+      <plugin.findbugs.version>3.0.4</plugin.findbugs.version>
       <plugin.install.version>2.5.2</plugin.install.version>
       <plugin.jacoco.version>0.7.7.201606060606</plugin.jacoco.version>
-      <plugin.jar.version>3.0.1</plugin.jar.version>
+      <plugin.jar.version>3.0.2</plugin.jar.version>
       <plugin.javadoc.version>2.10.4</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>2.5</plugin.jxr.version>
@@ -305,13 +304,17 @@
       <plugin.reports.version>2.9</plugin.reports.version>
       <plugin.resources.version>3.0.1</plugin.resources.version>
       <plugin.site.version>3.4</plugin.site.version>
-      <plugin.source.version>3.0.0</plugin.source.version>
+      <plugin.source.version>3.0.1</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
       <extension.wagon.version>2.10</extension.wagon.version>
+      <!-- ============================================== -->
+      <!-- ================= MAVEN SITE ================= -->
+      <!-- ============================================== -->
+      <site.skin.version>0.3.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -331,7 +334,7 @@
       </extensions>
       <pluginManagement>
          <plugins>
-            <!-- The following plugins always appear on the plugins list, even when
+            <!-- The following plugins always appear on the plugins list, even when 
                they have not been added to the project. -->
             <!-- This configuration block allows keeping them always updated. -->
             <plugin>
@@ -395,7 +398,7 @@
          </plugin>
          <plugin>
             <!-- Enforcer -->
-            <!-- Stops the project from being built if it does not comply with a
+            <!-- Stops the project from being built if it does not comply with a 
                set of rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
@@ -424,7 +427,7 @@
                   <configuration>
                      <rules>
                         <!-- Dependencies convergence. -->
-                        <!-- This variant of the rule requires less configuration,
+                        <!-- This variant of the rule requires less configuration, 
                            making use of Maven's dependency resolver. -->
                         <requireUpperBoundDeps />
                      </rules>

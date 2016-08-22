@@ -54,7 +54,7 @@
                 Corrected the plugin report colliding with the plugins info.
             </action>
         </release>
-        <release version="1.0.4" date="2016-06-20" description="Updated plugins">
+        <release version="1.0.4" date="2016-08-22" description="Updated plugins">
             <action dev="bmg" type="update">
                 Updated plugins.
             </action>
