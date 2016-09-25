@@ -325,10 +325,17 @@
       <defaultGoal>clean package install</defaultGoal>
       <extensions>
          <extension>
-            <!-- Wagon -->
+            <!-- Wagon SSH -->
             <!-- Enables the use of SSH. -->
             <groupId>org.apache.maven.wagon</groupId>
             <artifactId>wagon-ssh</artifactId>
+            <version>${extension.wagon.version}</version>
+         </extension>
+         <extension>
+            <!-- Wagon FTP -->
+            <!-- Enables the use of FTP. -->
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-ftp</artifactId>
             <version>${extension.wagon.version}</version>
          </extension>
       </extensions>
