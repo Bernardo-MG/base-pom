@@ -199,7 +199,7 @@
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>scp://docs.wandrell.com/public_html/maven/base-pom/</url>
+               <url>scp://docs.wandrell.com:2222/public_html/maven/base-pom/</url>
             </site>
          </distributionManagement>
       </profile>
@@ -211,7 +211,7 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>scp://docs.wandrell.com/public_html/maven/development/base-pom/</url>
+               <url>scp://docs.wandrell.com:2222/public_html/maven/development/base-pom/</url>
             </site>
          </distributionManagement>
       </profile>
