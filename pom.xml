@@ -331,13 +331,6 @@
             <artifactId>wagon-ssh</artifactId>
             <version>${extension.wagon.version}</version>
          </extension>
-         <extension>
-            <!-- Wagon FTP -->
-            <!-- Enables the use of FTP. -->
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-ftp</artifactId>
-            <version>${extension.wagon.version}</version>
-         </extension>
       </extensions>
       <pluginManagement>
          <plugins>
