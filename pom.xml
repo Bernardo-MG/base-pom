@@ -204,7 +204,7 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>scp://docs.wandrell.com:2222/home1/duenco/www/maven/development/base-pom/</url>
+               <url>scp://docs.wandrell.com:2222/home1/duenco/www/development/maven/base-pom/</url>
             </site>
          </distributionManagement>
       </profile>
