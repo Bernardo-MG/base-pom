@@ -1,24 +1,32 @@
 # Parent POMs
 
-While parent [POMs][maven-pom-intro] are mainly used for multi-module projects some, like the one in this project, are meant for standalone ones. This way it is possible taking advantage of Maven's dependency system to share a common configuration among several Java projects.
+Parent [Maven POM][maven-pom-intro] files take care of setting up common configuration which can be inherited by any Maven project.
+
+In this case it prepares several build and report plugins for the project, and also sets it up with a configuration based on various good practices, such as testing or dependency convergence.
+
+But above all it is meant to be a generic base POM, useful for any kind of project, no matter what actual technologies they are based on.
 
 ## Features
 
-- Sets the JDK version (Java 1.7 by default) to be used by the project.
-- Sets the encoding (UTF-8 by default) for all the project.
 - [Build validation][build-validation].
 - [Maven Site reports][site-reports] added for the project.
 - Common build and report [plugins][plugins-list].
 - Deployment plugin prepared to deploy into the distribution management repo.
 - Manifest prepared with default configuration.
+- Sets the JDK version (Java 1.7 by default) to be used by the project.
+- Sets the encoding (UTF-8 by default) for all the project.
 
 ## JDK support
 
 Only JDK 1.7 onward is supported. This is due to the plugins included in the POM.
 
-## Archetype
+## Dependencies
 
-Sort of an extension to this project, the [Library Maven Archetype][library-archetype] makes use, and extends over, this POM. Which means it not only is useful for creating new projects, but also shows how to use this one.
+The only dependencies included in the POM are the Maven plugins. No additional dependency is added.
+
+## Archetype using the POM
+
+The [Library Maven Archetype][library-archetype] makes use of the base POM, and also extends over it. It is a useful way to check how the POM can be used and modified.
 
 [maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
 

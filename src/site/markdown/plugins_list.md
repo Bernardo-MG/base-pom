@@ -1,10 +1,10 @@
 # Plugins
 
-A full set of plugins is readied for the inheritor project. These cover most of the common use cases, such as test execution or Javadoc generation, and also make sure that the Maven environment is up to date.
+The base POM sets up a full set of plugins. These cover most of the common use cases, such as test execution or Javadoc generation, and they all include the latest stable and bug-free version at the time of release.
 
 ## Build plugins
 
-These take part in creating the project artifacts.
+These are used when creating the project artifacts.
 
 Some are included in the plugin management as they usually are part of Maven project, even when they are not directly added as dependencies. But otherwise they will work like any other.
 
@@ -28,7 +28,7 @@ Some are included in the plugin management as they usually are part of Maven pro
 
 ## Report plugins
 
-Some may be repeated from the build section. In that case it usually means they will generate a report from the artifacts they generated during the build process.
+Some of these may be repeated from the build section. In that case it usually means they will generate a report from wathever they generated during the build process.
 
 - [Changes](https://maven.apache.org/plugins/maven-changes-plugin/), generates the changes report from the changes log.
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/), checks that the source files comply with style standards.
