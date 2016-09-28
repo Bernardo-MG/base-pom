@@ -1,9 +1,7 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} Usage
 
-The POM can be used as the parent POM for any Maven project.
-
-To do this just add the following lines to the project's POM:
+The POM can be used as the parent POM for any Maven project just by adding the following lines to the project's POM:
 
 ```xml
 <parent>

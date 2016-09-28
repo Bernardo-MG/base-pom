@@ -10,7 +10,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.0.4</version>
+   <version>1.0.5</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -131,13 +131,6 @@
             <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
             <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
          </properties>
-         <distributionManagement>
-            <site>
-               <id>site</id>
-               <name>Project Documentation Site</name>
-               <url>ftp://docs.wandrell.com/java-patterns</url>
-            </site>
-         </distributionManagement>
          <build>
             <plugins>
                <plugin>
@@ -199,7 +192,7 @@
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>ftp://docs.wandrell.com/base-pom</url>
+               <url>scp://docs.wandrell.com:2222/home1/duenco/www/maven/base-pom/</url>
             </site>
          </distributionManagement>
       </profile>
@@ -211,7 +204,7 @@
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>ftp://docs.wandrell.com/base-pom</url>
+               <url>scp://docs.wandrell.com:2222/home1/duenco/www/development/maven/base-pom/</url>
             </site>
          </distributionManagement>
       </profile>
@@ -314,7 +307,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>0.3.0</site.skin.version>
+      <site.skin.version>0.4.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -325,10 +318,10 @@
       <defaultGoal>clean package install</defaultGoal>
       <extensions>
          <extension>
-            <!-- Wagon -->
-            <!-- Enables the use of FTP. -->
+            <!-- Wagon SSH -->
+            <!-- Enables the use of SSH. -->
             <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-ftp</artifactId>
+            <artifactId>wagon-ssh</artifactId>
             <version>${extension.wagon.version}</version>
          </extension>
       </extensions>
