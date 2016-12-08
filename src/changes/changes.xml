@@ -65,5 +65,13 @@
             FTP.
          </action>
       </release>
+      <release version="1.0.6" date="2016-12-08" description="Configuration updates">
+         <action dev="bmg" type="update">
+            Updated Maven Skin.
+         </action>
+         <action dev="bmg" type="add">
+            Added a minimun Maven version requirement.
+         </action>
+      </release>
    </body>
 </document>

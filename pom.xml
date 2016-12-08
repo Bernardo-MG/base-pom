@@ -4,13 +4,17 @@
 
    <modelVersion>4.0.0</modelVersion>
 
+   <prerequisites>
+      <maven>${maven.version}</maven>
+   </prerequisites>
+
    <!-- ********************************************** -->
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.0.5-SNAPSHOT</version>
+   <version>1.0.6-SNAPSHOT</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -264,6 +268,10 @@
       <maven.compiler.source>1.7</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <!-- ============================================== -->
+      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============================================== -->
+      <maven.version>3.0.1</maven.version>
+      <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
@@ -449,6 +457,21 @@
                            <regex>.*</regex>
                            <regexMessage><![CDATA[It should be a valid name.]]></regexMessage>
                         </requireProperty>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-maven</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
+                        <!-- Only Maven 3.0 or higher is supported -->
+                        <requireMavenVersion>
+                           <version>[${maven.version},)</version>
+                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
+                        </requireMavenVersion>
                      </rules>
                   </configuration>
                </execution>
