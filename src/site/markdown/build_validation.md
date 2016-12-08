@@ -24,9 +24,15 @@ Which means that fixing dependency convergence conflicts just requires adding th
 
 ###  Required Java version rule
 
-Only current Java versions are accepted when building the project. Meaning that if the project is compiled by using one version older than Java 1.7 it will fail.
+Only current Java versions are accepted when building the project, if the project is compiled by using one version older the one defined for compilation the compilation process will fail.
 
-It will check for Java 1.7 by default, but if the project compilation version is changed then that version will be used in the rule.
+It will check for Java 1.7 by default, but if the project compilation version is changed, by changing the *maven.compiler.source* property, then that version will be used in the rule.
+
+###  Required Maven version rule
+
+Only current Maven versions are accepted when building the project, if the project is compiled by using one version older the one defined for compilation the compilation process will fail.
+
+It will check for Maven 3.0.1 by default, but if the *maven.version* property is changed then that version will be used in the rule.
 
 ### Plugin versions rule
 

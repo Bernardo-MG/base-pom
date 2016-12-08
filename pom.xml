@@ -4,13 +4,17 @@
 
    <modelVersion>4.0.0</modelVersion>
 
+   <prerequisites>
+      <maven>${maven.version}</maven>
+   </prerequisites>
+
    <!-- ********************************************** -->
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.0.5</version>
+   <version>1.1.0</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -125,8 +129,6 @@
          <!-- Sets the dependencies for the documentation generation and deployment. -->
          <id>site</id>
          <properties>
-            <!-- Plugins -->
-            <plugin.site.velocity.version>1.7</plugin.site.velocity.version>
             <!-- Maven Site -->
             <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
             <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
@@ -144,12 +146,6 @@
                         <groupId>com.wandrell.maven.skins</groupId>
                         <artifactId>docs-maven-skin</artifactId>
                         <version>${site.skin.version}</version>
-                     </dependency>
-                     <dependency>
-                        <!-- Velocity -->
-                        <groupId>org.apache.velocity</groupId>
-                        <artifactId>velocity</artifactId>
-                        <version>${plugin.site.velocity.version}</version>
                      </dependency>
                   </dependencies>
                </plugin>
@@ -272,14 +268,18 @@
       <maven.compiler.source>1.7</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <!-- ============================================== -->
+      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============================================== -->
+      <maven.version>3.0.1</maven.version>
+      <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
-      <plugin.assembly.version>2.6</plugin.assembly.version>
-      <plugin.changes.version>2.12</plugin.changes.version>
+      <plugin.assembly.version>3.0.0</plugin.assembly.version>
+      <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
       <plugin.clean.version>3.0.0</plugin.clean.version>
-      <plugin.compiler.version>3.5.1</plugin.compiler.version>
+      <plugin.compiler.version>3.6.0</plugin.compiler.version>
       <plugin.dependency.version>2.10</plugin.dependency.version>
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
@@ -292,11 +292,11 @@
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>2.5</plugin.jxr.version>
       <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
-      <plugin.pmd.version>3.6</plugin.pmd.version>
+      <plugin.pmd.version>3.7</plugin.pmd.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
       <plugin.resources.version>3.0.1</plugin.resources.version>
-      <plugin.site.version>3.4</plugin.site.version>
+      <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
@@ -307,7 +307,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>0.4.0</site.skin.version>
+      <site.skin.version>0.5.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -457,6 +457,21 @@
                            <regex>.*</regex>
                            <regexMessage><![CDATA[It should be a valid name.]]></regexMessage>
                         </requireProperty>
+                     </rules>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>enforce-maven</id>
+                  <goals>
+                     <goal>enforce</goal>
+                  </goals>
+                  <configuration>
+                     <rules>
+                        <!-- Only Maven 3.0 or higher is supported -->
+                        <requireMavenVersion>
+                           <version>[${maven.version},)</version>
+                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
+                        </requireMavenVersion>
                      </rules>
                   </configuration>
                </execution>
