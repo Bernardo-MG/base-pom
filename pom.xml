@@ -307,6 +307,8 @@
       <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
+      <!-- Default test listeners disabled to avoid conflicts with TestNG -->
+      <plugin.test.defaultListeners>false</plugin.test.defaultListeners>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
@@ -619,7 +621,7 @@
                      <!-- Default listeners disabled to avoid conflicts with 
                         TestNG -->
                      <name>usedefaultlisteners</name>
-                     <key>false</key>
+                     <key>${plugin.test.defaultListeners}</key>
                   </property>
                </properties>
             </configuration>
@@ -724,7 +726,7 @@
                      <!-- Default listeners disabled to avoid conflicts with 
                         TestNG -->
                      <name>usedefaultlisteners</name>
-                     <key>false</key>
+                     <key>${plugin.test.defaultListeners}</key>
                   </property>
                </properties>
             </configuration>
