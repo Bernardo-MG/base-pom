@@ -616,10 +616,6 @@
                      <name>usedefaultlisteners</name>
                      <key>false</key>
                   </property>
-                  <property>
-                     <name>suitename</name>
-                     <value>${project.groupId}.${project.artifactId}_Integration_Suite</value>
-                  </property>
                </properties>
             </configuration>
             <executions>
@@ -734,10 +730,6 @@
                         TestNG -->
                      <name>usedefaultlisteners</name>
                      <key>false</key>
-                  </property>
-                  <property>
-                     <name>suitename</name>
-                     <value>${project.groupId}.${project.artifactId}_Unit_Suite</value>
                   </property>
                </properties>
             </configuration>
