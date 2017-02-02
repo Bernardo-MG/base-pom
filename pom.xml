@@ -303,6 +303,11 @@
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <!-- ============================================== -->
+      <!-- =========== PLUGINS CONFIGURATION ============ -->
+      <!-- ============================================== -->
+      <!-- Relativizing the Maven Site links has a tendency to break them -->
+      <relativizeDecorationLinks>false</relativizeDecorationLinks>
+      <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
       <extension.wagon.version>2.10</extension.wagon.version>
@@ -675,16 +680,6 @@
                      <url>${project.url}</url>
                   </manifestEntries>
                </archive>
-            </configuration>
-         </plugin>
-         <plugin>
-            <!-- Site -->
-            <!-- Generates the Maven Site. -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <configuration>
-               <!-- Relativizing the links has a tendency to break them -->
-               <relativizeDecorationLinks>false</relativizeDecorationLinks>
             </configuration>
          </plugin>
          <plugin>
