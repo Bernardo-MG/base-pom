@@ -280,14 +280,14 @@
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
       <plugin.clean.version>3.0.0</plugin.clean.version>
-      <plugin.compiler.version>3.6.0</plugin.compiler.version>
-      <plugin.dependency.version>2.10</plugin.dependency.version>
+      <plugin.compiler.version>3.6.1</plugin.compiler.version>
+      <plugin.dependency.version>3.0.0</plugin.dependency.version>
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
       <plugin.failsafe.version>2.19.1</plugin.failsafe.version>
       <plugin.findbugs.version>3.0.4</plugin.findbugs.version>
       <plugin.install.version>2.5.2</plugin.install.version>
-      <plugin.jacoco.version>0.7.7.201606060606</plugin.jacoco.version>
+      <plugin.jacoco.version>0.7.8</plugin.jacoco.version>
       <plugin.jar.version>3.0.2</plugin.jar.version>
       <plugin.javadoc.version>2.10.4</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
@@ -296,7 +296,7 @@
       <plugin.pmd.version>3.7</plugin.pmd.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
-      <plugin.resources.version>3.0.1</plugin.resources.version>
+      <plugin.resources.version>3.0.2</plugin.resources.version>
       <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
