@@ -511,6 +511,13 @@
                <version>${plugin.surefire.version}</version>
             </plugin>
             <plugin>
+               <!-- Surefire report -->
+               <!-- Generates the unit tests report. -->
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-surefire-report-plugin</artifactId>
+               <version>${plugin.surefire.version}</version>
+            </plugin>
+            <plugin>
                <!-- Taglist -->
                <!-- Generates a report of all the temporal tags still on 
                   the code. -->
@@ -520,7 +527,8 @@
             </plugin>
             <plugin>
                <!-- Versions -->
-               <!-- Generates a report with the versions of all plugins and dependencies. -->
+               <!-- Generates a report with the versions of all plugins and 
+                  dependencies. -->
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>versions-maven-plugin</artifactId>
                <version>${plugin.versions.version}</version>
@@ -893,7 +901,7 @@
             </configuration>
          </plugin>
          <plugin>
-            <!-- Surefire -->
+            <!-- Surefire report -->
             <!-- Generates the unit tests report. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
