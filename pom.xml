@@ -157,7 +157,6 @@
                   <!-- It is set to also validate the changes log file. -->
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-changes-plugin</artifactId>
-                  <version>${plugin.changes.version}</version>
                   <executions>
                      <!-- Changes plugin is bound to the pre-site phase -->
                      <execution>
@@ -302,6 +301,7 @@
       <plugin.source.version>3.0.1</plugin.source.version>
       <plugin.surefire.version>2.19.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
+      <plugin.versions.version>2.3</plugin.versions.version>
       <!-- ============================================== -->
       <!-- =========== PLUGINS CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -338,7 +338,7 @@
          <plugins>
             <!-- Plugin versions and configurations are enforced here. -->
             <!-- Some of these plugins are added by default by Maven in some 
-               situations. -->
+               situations. Others are just useful. -->
             <plugin>
                <!-- Ant Run -->
                <!-- Capable of handling Ant scripts. -->
@@ -517,6 +517,13 @@
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>taglist-maven-plugin</artifactId>
                <version>${plugin.taglist.version}</version>
+            </plugin>
+            <plugin>
+               <!-- Versions -->
+               <!-- Generates a report with the versions of all plugins and dependencies. -->
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>versions-maven-plugin</artifactId>
+               <version>${plugin.versions.version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
