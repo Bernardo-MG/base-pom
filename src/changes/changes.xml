@@ -76,7 +76,7 @@
             Updated plugins.
          </action>
       </release>
-      <release version="1.1.1" date="2016-02-02" description="Configuration changes">
+      <release version="1.1.1" date="2016-02-03" description="Configuration updates">
          <action dev="bmg" type="fix">
             Corrected duplicated deployment.
          </action>
