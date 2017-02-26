@@ -14,7 +14,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.1.1</version>
+   <version>1.1.2</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -316,7 +316,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>0.5.0</site.skin.version>
+      <site.skin.version>0.5.3</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -723,7 +723,6 @@
                <execution>
                   <!-- Generates the Javadocs for the deployment -->
                   <id>attach-javadocs</id>
-                  <phase>deploy</phase>
                   <goals>
                      <goal>jar</goal>
                   </goals>
