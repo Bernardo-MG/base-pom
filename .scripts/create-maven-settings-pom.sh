@@ -62,8 +62,8 @@ set -o nounset
 set -e
 
 v_type=${1:-}
-profile_release=${2:-default "deploy-site-release"}
-profile_develop=${3:-default "deploy-site-development"}
+profile_release=${2:-"deploy-site-release"}
+profile_develop=${3:-"deploy-site-development"}
 
 # The contents of the file are created
 {
