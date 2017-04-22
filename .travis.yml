@@ -23,6 +23,7 @@ before_install:
   - git clone -b v0.4.1 --single-branch https://github.com/Bernardo-MG/ci-shell-scripts.git ~/.scripts
   # Sets scripts as executable
   - chmod -R +x ~/.scripts/*
+  - chmod +x ./.scripts/create-maven-settings-pom.sh
   # Prepares CI environment
   - source ~/.scripts/travis/load-travis-environment.sh
 before_script:
