@@ -56,8 +56,8 @@ set -o nounset
 set -e
 
 v_type=${1:-}
-profile_release=${2:-deploy-site-release}
-profile_develop=${3:-deploy-site-development}
+profile_release=${2:-"deploy-site-release"}
+profile_develop=${3:-"deploy-site-development"}
 
 # The contents of the file are created
 {
@@ -105,7 +105,7 @@ profile_develop=${3:-deploy-site-development}
    # Active profile
    # --------------
 
-   # These profiles are used to set the site repository info
+   # These profiles are used to set configuration specific to a version type
    if [ "${v_type}" == "release" ]; then
       # Release version
       echo "<activeProfiles>"
