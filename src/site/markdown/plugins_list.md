@@ -38,6 +38,7 @@ Some of these may be repeated from the build section. In that case it usually me
 - [JDepend](http://www.mojohaus.org/jdepend-maven-plugin/), generates the dependencies report.
 - [Javadoc](https://maven.apache.org/plugins/maven-javadoc-plugin/), generates the Javadocs.
 - [JXR](http://maven.apache.org/jxr/maven-jxr-plugin/), generates references to the source files, used by other reports.
+- [OWASP Dependency Check](https://jeremylong.github.io/DependencyCheck/), searches for dependencies with known vulnerabilities.
 - [PMD](https://maven.apache.org/plugins/maven-pmd-plugin/), checks that the code complies with a series of code quality rules.
 - [Project Info](https://maven.apache.org/plugins/maven-project-info-reports-plugin/), generates general information reports.
 - [Site](https://maven.apache.org/plugins/maven-site-plugin/), generates the Maven Site.
