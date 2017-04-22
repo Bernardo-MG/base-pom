@@ -94,5 +94,10 @@
             Added OWASP dependency check plugin.
          </action>
       </release>
+      <release version="1.1.4" date="2017-04-22" description="Changed profiles">
+         <action dev="bmg" type="fix">
+            Changed the site deployment plugins to avoid collisions with inheritor projects.
+         </action>
+      </release>
    </body>
 </document>
