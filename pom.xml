@@ -184,7 +184,7 @@
       <profile>
          <!-- Site release deployment profile. -->
          <!-- Sets the site repository to point to the releases repo. -->
-         <id>deploy-site-release</id>
+         <id>deploy-site-release-pom</id>
          <distributionManagement>
             <site>
                <id>site</id>
@@ -196,7 +196,7 @@
       <profile>
          <!-- Site development deployment profile. -->
          <!-- Sets the site repository to point to the development repo. -->
-         <id>deploy-site-development</id>
+         <id>deploy-site-development-pom</id>
          <distributionManagement>
             <site>
                <id>site-development</id>
