@@ -126,5 +126,7 @@ profile_develop=${3:-"deploy-site-development"}
 } >> ~/settings.xml
 
 echo "Created Maven settings file"
+echo "Releases profile: ${profile_release}"
+echo "Development profile: ${profile_develop}"
 
 exit 0
