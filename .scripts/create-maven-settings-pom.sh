@@ -27,10 +27,14 @@
 # --- PROFILES ---
 #
 # One of two profiles may be set, depending on the type of version, which is read from
-# the VERSION_TYPE environmental variable:
+# the VERSION_TYPE environmental variable.
+#
+# By default these profiles are:
 #
 # - deploy-site-release: for setting up the release site deployment
 # - deploy-site-development: for setting up the development site deployment
+#
+# They can be changed through the parameters.
 #
 # -- PARAMETERS --
 #
