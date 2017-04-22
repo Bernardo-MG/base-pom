@@ -36,6 +36,8 @@
 #
 # The function expects the following parameters:
 # $1: A string, one of release|develop, otherwise it is ignored.
+# $2: A string, the name of the profile with the release deployment configuration.
+# $3: A string, the name of the profile with the snapshot deployment configuration.
 #
 # --- ENVIRONMENTAL VARIABLES ---
 #
