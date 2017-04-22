@@ -28,7 +28,7 @@ before_install:
 before_script:
   # Creates Maven settings
   # - ~/.scripts/java/maven/create-maven-settings.sh $VERSION_TYPE
-  - /.scripts/create-maven-settings-pom.sh $VERSION_TYPE,"deploy-site-release-pom","deploy-site-development-pom"
+  - ./.scripts/create-maven-settings-pom.sh $VERSION_TYPE,"deploy-site-release-pom","deploy-site-development-pom"
 script:
   # Unit and integration tests are run
   - mvn clean verify
