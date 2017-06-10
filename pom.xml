@@ -565,7 +565,7 @@
                      <rules>
                         <!-- Not obsolete JDK. -->
                         <requireJavaVersion>
-                           <version>[${maven.compiler.source},)</version>
+                           <version>[${java.version},)</version>
                         </requireJavaVersion>
                      </rules>
                   </configuration>
