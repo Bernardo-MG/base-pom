@@ -259,6 +259,10 @@
 
    <properties>
       <!-- ============================================== -->
+      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============================================== -->
+      <maven.version>3.1</maven.version>
+      <!-- ============================================== -->
       <!-- ================== ENCODING ================== -->
       <!-- ============================================== -->
       <files.encoding>UTF-8</files.encoding>
@@ -271,9 +275,10 @@
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <!-- ============================================== -->
-      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============= COMPILER WARNINGS ============== -->
       <!-- ============================================== -->
-      <maven.version>3.1</maven.version>
+      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
