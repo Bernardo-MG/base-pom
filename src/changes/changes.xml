@@ -99,5 +99,16 @@
             Changed the site deployment plugins to avoid collisions with inheritor projects.
          </action>
       </release>
+      <release version="1.1.5" date="2017-06-10" description="Additional configuration">
+         <action dev="bmg" type="add">
+            Added a property for easing changing the Java version.
+         </action>
+         <action dev="bmg" type="add">
+            Added a property for easing changing the file encoding.
+         </action>
+         <action dev="bmg" type="add">
+            Enabled compiled warnings.
+         </action>
+      </release>
    </body>
 </document>
