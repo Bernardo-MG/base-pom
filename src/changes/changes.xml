@@ -99,7 +99,7 @@
             Changed the site deployment plugins to avoid collisions with inheritor projects.
          </action>
       </release>
-      <release version="1.1.5" date="2017-06-10" description="Additional configuration">
+      <release version="1.1.5" date="2017-07-13" description="Additional configuration">
          <action dev="bmg" type="add">
             Added a property for easing changing the Java version.
          </action>
@@ -108,6 +108,9 @@
          </action>
          <action dev="bmg" type="add">
             Enabled compiled warnings.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Wagon dependency to fix site deployment issues.
          </action>
       </release>
    </body>
