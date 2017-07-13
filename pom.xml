@@ -14,7 +14,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.1.4</version>
+   <version>1.1.5</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -259,19 +259,26 @@
 
    <properties>
       <!-- ============================================== -->
+      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============================================== -->
+      <maven.version>3.1</maven.version>
+      <!-- ============================================== -->
       <!-- ================== ENCODING ================== -->
       <!-- ============================================== -->
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <files.encoding>UTF-8</files.encoding>
+      <project.build.sourceEncoding>${files.encoding}</project.build.sourceEncoding>
       <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
       <!-- ============================================== -->
       <!-- ================ JAVA VERSION ================ -->
       <!-- ============================================== -->
-      <maven.compiler.source>1.7</maven.compiler.source>
+      <java.version>1.7</java.version>
+      <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <!-- ============================================== -->
-      <!-- =============== MAVEN VERSION ================ -->
+      <!-- ============= COMPILER WARNINGS ============== -->
       <!-- ============================================== -->
-      <maven.version>3.1</maven.version>
+      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
@@ -313,7 +320,7 @@
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
-      <extension.wagon.version>2.10</extension.wagon.version>
+      <extension.wagon.version>2.12</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
@@ -563,7 +570,7 @@
                      <rules>
                         <!-- Not obsolete JDK. -->
                         <requireJavaVersion>
-                           <version>[${maven.compiler.source},)</version>
+                           <version>[${java.version},)</version>
                         </requireJavaVersion>
                      </rules>
                   </configuration>
