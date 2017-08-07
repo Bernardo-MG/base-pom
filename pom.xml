@@ -443,7 +443,7 @@
             </plugin>
             <plugin>
                <!-- Jar -->
-               <!-- Generates the jar file. -->
+               <!-- Generates the JAR package. -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-jar-plugin</artifactId>
                <version>${plugin.jar.version}</version>
