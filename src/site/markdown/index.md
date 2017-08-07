@@ -26,7 +26,7 @@ The only dependencies included in the POM are the Maven plugins. No additional d
 
 ## Archetype using the POM
 
-The [Library Maven Archetype][library-archetype] makes use of the base POM, and also extends over it. It is a useful way to check how the POM can be used and modified.
+The [Library Maven Archetype][library-archetype] makes use of the base POM, and also extends over it, when generating a new project. It is a useful way to check how the POM can be used and modified.
 
 [maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
 

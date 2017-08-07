@@ -10,7 +10,7 @@
 
    <custom>
       <skinConfig>
-         <keywords>Maven, Java, library</keywords>
+         <keywords>Maven, Java, library, pom</keywords>
          <descriptionUrl>Check the documentation for ${projectName}</descriptionUrl>
          <twitterSite>@Wandrell_BMG</twitterSite>
          <topNav>

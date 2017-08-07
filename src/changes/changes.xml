@@ -113,5 +113,10 @@
             Updated Wagon dependency to fix site deployment issues.
          </action>
       </release>
+      <release version="1.1.6" date="2017-08-07" description="Disabled OWASP plugin">
+         <action dev="bmg" type="remove">
+            Disabled OWASP plugin, as it took too much time.
+         </action>
+      </release>
    </body>
 </document>
