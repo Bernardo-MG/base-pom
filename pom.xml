@@ -309,6 +309,7 @@
       <plugin.surefire.version>2.20.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <plugin.versions.version>2.5</plugin.versions.version>
+      <plugin.war.version>3.2.0</plugin.war.version>
       <!-- ============================================== -->
       <!-- =========== PLUGINS CONFIGURATION ============ -->
       <!-- ============================================== -->
@@ -539,6 +540,13 @@
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>versions-maven-plugin</artifactId>
                <version>${plugin.versions.version}</version>
+            </plugin>
+            <plugin>
+               <!-- WAR -->
+               <!-- Generates the WAR package. -->
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-war-plugin</artifactId>
+               <version>${plugin.war.version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
