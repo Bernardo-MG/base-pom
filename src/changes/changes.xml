@@ -118,5 +118,10 @@
             Disabled OWASP plugin, as it took too much time.
          </action>
       </release>
+      <release version="1.1.7" date="2017-10-15" description="Updated plugins">
+         <action dev="bmg" type="remove">
+            Updated plugins.
+         </action>
+      </release>
    </body>
 </document>
