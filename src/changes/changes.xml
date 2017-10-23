@@ -122,6 +122,9 @@
          <action dev="bmg" type="add">
             Added WAR plugin to the managed plugins.
          </action>
+         <action dev="bmg" type="add">
+            Added build helper plugin to the managed plugins.
+         </action>
          <action dev="bmg" type="update">
             Updated plugins.
          </action>
