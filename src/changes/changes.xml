@@ -125,6 +125,9 @@
          <action dev="bmg" type="update">
             Updated plugins.
          </action>
+         <action dev="bmg" type="remove">
+            Removed TestNG support.
+         </action>
       </release>
    </body>
 </document>

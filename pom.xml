@@ -277,7 +277,9 @@
       <!-- ============================================== -->
       <!-- ============= COMPILER WARNINGS ============== -->
       <!-- ============================================== -->
+      <!-- Deprecation warnings are logged -->
       <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+      <!-- Compilation warnings are logged -->
       <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
@@ -315,8 +317,10 @@
       <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- Default test listeners disabled to avoid conflicts with TestNG -->
-      <plugin.test.defaultListeners>false</plugin.test.defaultListeners>
+      <!-- Compilation warnings are logged -->
+      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+      <!-- Deprecation warnings are logged -->
+      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
@@ -645,16 +649,6 @@
             <!-- Runs integration tests. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <configuration>
-               <properties>
-                  <property>
-                     <!-- Default listeners disabled to avoid conflicts with 
-                        TestNG -->
-                     <name>usedefaultlisteners</name>
-                     <key>${plugin.test.defaultListeners}</key>
-                  </property>
-               </properties>
-            </configuration>
             <executions>
                <!-- Failsafe is bound to the integration-test and verify 
                   phases -->
@@ -743,22 +737,6 @@
                   </goals>
                </execution>
             </executions>
-         </plugin>
-         <plugin>
-            <!-- Surefire -->
-            <!-- Runs unit tests. -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-               <properties>
-                  <property>
-                     <!-- Default listeners disabled to avoid conflicts with 
-                        TestNG -->
-                     <name>usedefaultlisteners</name>
-                     <key>${plugin.test.defaultListeners}</key>
-                  </property>
-               </properties>
-            </configuration>
          </plugin>
       </plugins>
    </build>
