@@ -132,5 +132,10 @@
             Removed TestNG support.
          </action>
       </release>
+      <release version="1.1.8" date="2017-11-13" description="Relocation">
+         <action dev="bmg" type="update">
+            Prepared for relocation.
+         </action>
+      </release>
    </body>
 </document>
