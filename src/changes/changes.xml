@@ -118,7 +118,7 @@
             Disabled OWASP plugin, as it took too much time.
          </action>
       </release>
-      <release version="1.1.7" date="2017-10-15" description="Updated plugins">
+      <release version="1.1.7" date="2017-11-13" description="Updated plugins">
          <action dev="bmg" type="add">
             Added WAR plugin to the managed plugins.
          </action>
