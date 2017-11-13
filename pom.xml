@@ -54,7 +54,7 @@
 
    <distributionManagement>
       <relocation>
-         <groupId>com.bernardomg.velocity</groupId>
+         <groupId>com.bernardomg.maven</groupId>
       </relocation>
       <repository>
          <uniqueVersion>false</uniqueVersion>
