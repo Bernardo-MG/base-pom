@@ -14,7 +14,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.1.6</version>
+   <version>1.1.7</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -277,45 +277,51 @@
       <!-- ============================================== -->
       <!-- ============= COMPILER WARNINGS ============== -->
       <!-- ============================================== -->
+      <!-- Deprecation warnings are logged -->
       <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+      <!-- Compilation warnings are logged -->
       <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
       <plugin.ant.version>1.8</plugin.ant.version>
-      <plugin.assembly.version>3.0.0</plugin.assembly.version>
+      <plugin.assembly.version>3.1.0</plugin.assembly.version>
+      <plugin.buildhelp.version>3.0.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
       <plugin.clean.version>3.0.0</plugin.clean.version>
-      <plugin.compiler.version>3.6.1</plugin.compiler.version>
-      <plugin.dependency.version>3.0.0</plugin.dependency.version>
+      <plugin.compiler.version>3.7.0</plugin.compiler.version>
+      <plugin.dependency.version>3.0.2</plugin.dependency.version>
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
-      <plugin.failsafe.version>2.19.1</plugin.failsafe.version>
-      <plugin.findbugs.version>3.0.4</plugin.findbugs.version>
+      <plugin.failsafe.version>2.20.1</plugin.failsafe.version>
+      <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
       <plugin.install.version>2.5.2</plugin.install.version>
-      <plugin.jacoco.version>0.7.8</plugin.jacoco.version>
+      <plugin.jacoco.version>0.7.9</plugin.jacoco.version>
       <plugin.jar.version>3.0.2</plugin.jar.version>
       <plugin.javadoc.version>2.10.4</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>2.5</plugin.jxr.version>
       <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
-      <plugin.pmd.version>3.7</plugin.pmd.version>
+      <plugin.pmd.version>3.8</plugin.pmd.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>2.9</plugin.reports.version>
       <plugin.resources.version>3.0.2</plugin.resources.version>
       <plugin.site.version>3.6</plugin.site.version>
       <plugin.source.version>3.0.1</plugin.source.version>
-      <plugin.surefire.version>2.19.1</plugin.surefire.version>
+      <plugin.surefire.version>2.20.1</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
-      <plugin.versions.version>2.3</plugin.versions.version>
+      <plugin.versions.version>2.5</plugin.versions.version>
+      <plugin.war.version>3.2.0</plugin.war.version>
       <!-- ============================================== -->
       <!-- =========== PLUGINS CONFIGURATION ============ -->
       <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- Default test listeners disabled to avoid conflicts with TestNG -->
-      <plugin.test.defaultListeners>false</plugin.test.defaultListeners>
+      <!-- Compilation warnings are logged -->
+      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+      <!-- Deprecation warnings are logged -->
+      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
@@ -359,6 +365,13 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-assembly-plugin</artifactId>
                <version>${plugin.assembly.version}</version>
+            </plugin>
+            <plugin>
+               <!-- Build helper -->
+               <!-- Adds the generated files to the Maven classpath -->
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>build-helper-maven-plugin</artifactId>
+               <version>${plugin.buildhelp.version}</version>
             </plugin>
             <plugin>
                <!-- Changes -->
@@ -540,6 +553,13 @@
                <artifactId>versions-maven-plugin</artifactId>
                <version>${plugin.versions.version}</version>
             </plugin>
+            <plugin>
+               <!-- WAR -->
+               <!-- Generates the WAR package. -->
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-war-plugin</artifactId>
+               <version>${plugin.war.version}</version>
+            </plugin>
          </plugins>
       </pluginManagement>
       <plugins>
@@ -637,16 +657,6 @@
             <!-- Runs integration tests. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <configuration>
-               <properties>
-                  <property>
-                     <!-- Default listeners disabled to avoid conflicts with 
-                        TestNG -->
-                     <name>usedefaultlisteners</name>
-                     <key>${plugin.test.defaultListeners}</key>
-                  </property>
-               </properties>
-            </configuration>
             <executions>
                <!-- Failsafe is bound to the integration-test and verify 
                   phases -->
@@ -735,22 +745,6 @@
                   </goals>
                </execution>
             </executions>
-         </plugin>
-         <plugin>
-            <!-- Surefire -->
-            <!-- Runs unit tests. -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-               <properties>
-                  <property>
-                     <!-- Default listeners disabled to avoid conflicts with 
-                        TestNG -->
-                     <name>usedefaultlisteners</name>
-                     <key>${plugin.test.defaultListeners}</key>
-                  </property>
-               </properties>
-            </configuration>
          </plugin>
       </plugins>
    </build>
