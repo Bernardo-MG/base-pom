@@ -14,7 +14,7 @@
 
    <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.1.8-SNAPSHOT</version>
+   <version>1.1.9-SNAPSHOT</version>
    <packaging>pom</packaging>
 
    <name>Wandrell's base POM</name>
@@ -187,24 +187,24 @@
       <profile>
          <!-- Release deployment profile. -->
          <!-- Sets the site repository to point to the releases repo. -->
-         <id>deployment-release-pom</id>
+         <id>deployment-release</id>
          <distributionManagement>
             <site>
                <id>site</id>
                <name>Project Documentation Site</name>
-               <url>scp://docs.wandrell.com:2222/home1/duenco/www/maven/base-pom/</url>
+               <url>${site.release.url}</url>
             </site>
          </distributionManagement>
       </profile>
       <profile>
          <!-- Development deployment profile. -->
          <!-- Sets the site repository to point to the development repo. -->
-         <id>deployment-development-pom</id>
+         <id>deployment-development</id>
          <distributionManagement>
             <site>
                <id>site-development</id>
                <name>Project Development Documentation Site</name>
-               <url>scp://docs.wandrell.com:2222/home1/duenco/www/development/maven/base-pom/</url>
+               <url>${site.develop.url}</url>
             </site>
          </distributionManagement>
       </profile>
