@@ -21,7 +21,7 @@ before_install:
   - source ~/.scripts/travis/load-travis-environment.sh
 before_script:
   # Creates Maven settings
-  - ~/.scripts/java/maven/create-maven-settings.sh $VERSION_TYPE deployment-release-pom deployment-development-pom
+  - ~/.scripts/java/maven/create-maven-settings.sh $VERSION_TYPE
 script:
   # Unit and integration tests are run
   - mvn clean verify
