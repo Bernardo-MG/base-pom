@@ -12,7 +12,7 @@
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
 
-   <groupId>com.bernardomg.maven</groupId>
+   <groupId>com.wandrell.maven</groupId>
    <artifactId>base-pom</artifactId>
    <version>1.1.9-SNAPSHOT</version>
    <packaging>pom</packaging>
@@ -136,7 +136,7 @@
          <properties>
             <!-- Maven Site -->
             <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
-            <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom</mavenURL>
+            <mavenURL>http://mvnrepository.com/artifact/com.wandrell.maven/base-pom</mavenURL>
          </properties>
          <build>
             <plugins>
@@ -148,7 +148,7 @@
                   <dependencies>
                      <dependency>
                         <!-- Docs Maven Skin -->
-                        <groupId>com.bernardomg.maven.skins</groupId>
+                        <groupId>com.wandrell.maven.skins</groupId>
                         <artifactId>docs-maven-skin</artifactId>
                         <version>${site.skin.version}</version>
                      </dependency>
@@ -228,7 +228,7 @@
          </activation>
          <properties>
             <!-- Manifest data -->
-            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
+            <manifest.name>com/wandrell/maven/pom/base</manifest.name>
          </properties>
       </profile>
    </profiles>
@@ -334,7 +334,7 @@
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
-      <site.skin.version>1.2.0</site.skin.version>
+      <site.skin.version>1.0.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
