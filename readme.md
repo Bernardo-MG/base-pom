@@ -1,4 +1,4 @@
-# Wandrell's Base POM
+# Base POM
 
 Parent [Maven POM][maven-pom-intro] setting up a Maven project for common usage, taking advantage of several plugins, and supporting good practices such as unit and integration testing, or dependency convergence.
 
