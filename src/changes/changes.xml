@@ -5,32 +5,9 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="0.1.0" date="2015-12-6" description="First release">
-         <action dev="bmg" type="add">
-            First release of the library.
-         </action>
-      </release>
-      <release version="0.1.1" date="2016-03-13" description="Enforcer rules changes">
-         <action dev="bmg" type="update">
-            Divided the enforcer execution into one for each rule.
-         </action>
-         <action dev="bmg" type="update">
-            The version enforcer rule is now based
-            on the Java version set for the project.
-         </action>
-      </release>
       <release version="1.0.0" date="2016-05-11" description="First release">
          <action dev="bmg" type="update">
-            Set as first release.
-         </action>
-         <action dev="bmg" type="update">
-            Updated plugins.
-         </action>
-         <action dev="bmg" type="add">
-            Extended documentation.
-         </action>
-         <action dev="bmg" type="add">
-            Added a list of the plugins to the documentation.
+            First release.
          </action>
       </release>
       <release version="1.0.1" date="2016-05-21" description="CI updates">
@@ -143,6 +120,17 @@
       <release version="1.2.0" date="2017-11-19" description="Relocation">
          <action dev="bmg" type="update">
             Relocation.
+         </action>
+      </release>
+      <release version="1.2.1" date="2017-11-19" description="Updated plugins">
+         <action dev="bmg" type="update">
+            Updated Checkstyle plugin.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Javadoc plugin.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Maven site plugin.
          </action>
       </release>
    </body>
