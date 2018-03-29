@@ -63,7 +63,7 @@
          <uniqueVersion>false</uniqueVersion>
          <id>snapshots</id>
          <name>Snapshots Repository</name>
-         <url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
+         <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
       </snapshotRepository>
    </distributionManagement>
 
