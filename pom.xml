@@ -59,12 +59,6 @@
          <name>Releases Repository</name>
          <url>https://api.bintray.com/maven/bernardo-mg/maven/base-pom</url>
       </repository>
-      <snapshotRepository>
-         <uniqueVersion>false</uniqueVersion>
-         <id>snapshots</id>
-         <name>Snapshots Repository</name>
-         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-      </snapshotRepository>
    </distributionManagement>
 
    <!-- ********************************************** -->
