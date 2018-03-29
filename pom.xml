@@ -316,21 +316,15 @@
       <plugin.versions.version>2.5</plugin.versions.version>
       <plugin.war.version>3.2.0</plugin.war.version>
       <!-- ============================================== -->
-      <!-- =========== PLUGINS CONFIGURATION ============ -->
-      <!-- ============================================== -->
-      <!-- Relativizing the Maven Site links has a tendency to break them -->
-      <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- Compilation warnings are logged -->
-      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
-      <!-- Deprecation warnings are logged -->
-      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
-      <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
       <extension.wagon.version>2.12</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
+      <!-- Relativizing the Maven Site links has a tendency to break them -->
+      <relativizeDecorationLinks>false</relativizeDecorationLinks>
+      <!-- Skin version -->
       <site.skin.version>1.2.0</site.skin.version>
    </properties>
 
