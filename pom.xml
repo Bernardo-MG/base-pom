@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.2.1</version>
+   <version>1.2.2</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -63,7 +63,7 @@
          <uniqueVersion>false</uniqueVersion>
          <id>snapshots</id>
          <name>Snapshots Repository</name>
-         <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+         <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
       </snapshotRepository>
    </distributionManagement>
 
@@ -316,21 +316,15 @@
       <plugin.versions.version>2.5</plugin.versions.version>
       <plugin.war.version>3.2.0</plugin.war.version>
       <!-- ============================================== -->
-      <!-- =========== PLUGINS CONFIGURATION ============ -->
-      <!-- ============================================== -->
-      <!-- Relativizing the Maven Site links has a tendency to break them -->
-      <relativizeDecorationLinks>false</relativizeDecorationLinks>
-      <!-- Compilation warnings are logged -->
-      <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
-      <!-- Deprecation warnings are logged -->
-      <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
-      <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
       <extension.wagon.version>2.12</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
+      <!-- Relativizing the Maven Site links has a tendency to break them -->
+      <relativizeDecorationLinks>false</relativizeDecorationLinks>
+      <!-- Skin version -->
       <site.skin.version>1.2.0</site.skin.version>
    </properties>
 
@@ -561,6 +555,21 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-war-plugin</artifactId>
                <version>${plugin.war.version}</version>
+               <configuration>
+                  <archive>
+                     <index>true</index>
+                     <manifest>
+                        <addClasspath>true</addClasspath>
+                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        <packageName>${project.groupId}</packageName>
+                     </manifest>
+                     <manifestEntries>
+                        <name>${manifest.name}</name>
+                        <url>${project.url}</url>
+                     </manifestEntries>
+                  </archive>
+               </configuration>
             </plugin>
          </plugins>
       </pluginManagement>
@@ -698,8 +707,8 @@
             </executions>
          </plugin>
          <plugin>
-            <!-- Jar -->
-            <!-- Generates the jar file. -->
+            <!-- JAR -->
+            <!-- Generates the JAR package. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <configuration>
