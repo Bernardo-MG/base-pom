@@ -133,5 +133,10 @@
             Updated Maven site plugin.
          </action>
       </release>
+      <release version="1.2.2" date="2018-04-11" description="Set up WAR manifest">
+         <action dev="bmg" type="add">
+            Added manifest info to the WAR plugin.
+         </action>
+      </release>
    </body>
 </document>
