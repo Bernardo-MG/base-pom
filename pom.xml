@@ -555,6 +555,21 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-war-plugin</artifactId>
                <version>${plugin.war.version}</version>
+               <configuration>
+                  <archive>
+                     <index>true</index>
+                     <manifest>
+                        <addClasspath>true</addClasspath>
+                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        <packageName>${project.groupId}</packageName>
+                     </manifest>
+                     <manifestEntries>
+                        <name>${manifest.name}</name>
+                        <url>${project.url}</url>
+                     </manifestEntries>
+                  </archive>
+               </configuration>
             </plugin>
          </plugins>
       </pluginManagement>
@@ -692,8 +707,8 @@
             </executions>
          </plugin>
          <plugin>
-            <!-- Jar -->
-            <!-- Generates the jar file. -->
+            <!-- JAR -->
+            <!-- Generates the JAR package. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <configuration>
