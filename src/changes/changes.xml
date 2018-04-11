@@ -122,7 +122,7 @@
             Relocation.
          </action>
       </release>
-      <release version="1.2.1" date="2017-11-19" description="Updated plugins">
+      <release version="1.2.1" date="2018-01-14" description="Updated plugins">
          <action dev="bmg" type="update">
             Updated Checkstyle plugin.
          </action>
