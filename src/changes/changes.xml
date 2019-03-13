@@ -143,5 +143,10 @@
             Updated Maven plugins.
          </action>
       </release>
+      <release version="1.2.4" date="2019-03-13" description="Reports plugin fix">
+         <action dev="bmg" type="fix">
+            Corrected maven site report goals.
+         </action>
+      </release>
    </body>
 </document>

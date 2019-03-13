@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.2.3</version>
+   <version>1.2.4</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -325,7 +325,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>1.3.0</site.skin.version>
+      <site.skin.version>1.4.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -775,9 +775,9 @@
                <reportSet>
                   <reports>
                      <report>summary</report>
-                     <report>license</report>
+                     <report>licenses</report>
                      <report>modules</report>
-                     <report>project-team</report>
+                     <report>team</report>
                      <report>dependencies</report>
                      <report>dependency-info</report>
                      <report>dependency-management</report>
