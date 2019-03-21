@@ -653,10 +653,10 @@
                   </goals>
                   <configuration>
                      <rules>
-                        <!-- Only Maven 3.0 or higher is supported -->
+                        <!-- Check Maven version -->
                         <requireMavenVersion>
                            <version>[${maven.version},)</version>
-                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
+                           <message><![CDATA[Only Maven ${maven.version} or higher is supported.]]></message>
                         </requireMavenVersion>
                      </rules>
                   </configuration>
