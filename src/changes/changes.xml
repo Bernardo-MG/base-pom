@@ -148,7 +148,7 @@
             Corrected maven site report goals.
          </action>
       </release>
-      <release version="1.3.0" date="2019-03-13" description="">
+      <release version="1.3.0" date="2019-03-13" description="Updated Maven plugins and JDK support">
          <action dev="bmg" type="remove">
             Dropped JDK 7 support.
          </action>
