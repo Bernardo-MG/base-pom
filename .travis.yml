@@ -8,8 +8,8 @@ matrix:
     # Code artifacts deployed with OpenJDK7
     - jdk: openjdk7
       env: DEPLOY=true
-    # Documentation deployed with JDK8
-    - jdk: oraclejdk8
+    # Documentation deployed with OpenJDK8
+    - jdk: openjdk8
       env: DEPLOY_DOCS=true
 
 before_install:
