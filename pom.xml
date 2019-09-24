@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.2.4</version>
+   <version>1.3.0</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -290,31 +290,31 @@
       <plugin.assembly.version>3.1.1</plugin.assembly.version>
       <plugin.buildhelp.version>3.0.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
-      <plugin.checkstyle.version>3.0.0</plugin.checkstyle.version>
+      <plugin.checkstyle.version>3.1.0</plugin.checkstyle.version>
       <plugin.clean.version>3.1.0</plugin.clean.version>
-      <plugin.compiler.version>3.8.0</plugin.compiler.version>
+      <plugin.compiler.version>3.8.1</plugin.compiler.version>
       <plugin.dependency.version>3.1.1</plugin.dependency.version>
       <plugin.deploy.version>2.8.2</plugin.deploy.version>
       <plugin.enforcer.version>1.4.1</plugin.enforcer.version>
       <plugin.failsafe.version>2.21.0</plugin.failsafe.version>
       <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
       <plugin.install.version>2.5.2</plugin.install.version>
-      <plugin.jacoco.version>0.8.3</plugin.jacoco.version>
-      <plugin.jar.version>3.1.1</plugin.jar.version>
-      <plugin.javadoc.version>3.1.0</plugin.javadoc.version>
+      <plugin.jacoco.version>0.8.4</plugin.jacoco.version>
+      <plugin.jar.version>3.1.2</plugin.jar.version>
+      <plugin.javadoc.version>3.1.1</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>3.0.0</plugin.jxr.version>
       <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
-      <plugin.pmd.version>3.11.0</plugin.pmd.version>
+      <plugin.pmd.version>3.12.0</plugin.pmd.version>
       <plugin.release.version>2.5.3</plugin.release.version>
       <plugin.reports.version>3.0.0</plugin.reports.version>
       <plugin.resources.version>3.1.0</plugin.resources.version>
-      <plugin.site.version>3.7.1</plugin.site.version>
-      <plugin.source.version>3.0.1</plugin.source.version>
+      <plugin.site.version>3.8.2</plugin.site.version>
+      <plugin.source.version>3.1.0</plugin.source.version>
       <plugin.surefire.version>2.21.0</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <plugin.versions.version>2.7</plugin.versions.version>
-      <plugin.war.version>3.2.2</plugin.war.version>
+      <plugin.war.version>3.2.3</plugin.war.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
@@ -325,7 +325,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>1.4.0</site.skin.version>
+      <site.skin.version>1.4.2</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -653,10 +653,10 @@
                   </goals>
                   <configuration>
                      <rules>
-                        <!-- Only Maven 3.0 or higher is supported -->
+                        <!-- Check Maven version -->
                         <requireMavenVersion>
                            <version>[${maven.version},)</version>
-                           <message><![CDATA[Only Maven 3.0 or higher is supported.]]></message>
+                           <message><![CDATA[Only Maven ${maven.version} or higher is supported.]]></message>
                         </requireMavenVersion>
                      </rules>
                   </configuration>
