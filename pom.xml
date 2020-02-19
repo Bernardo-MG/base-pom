@@ -325,7 +325,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>1.4.2</site.skin.version>
+      <site.skin.version>2.0.6</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
