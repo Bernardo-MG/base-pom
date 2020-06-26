@@ -166,5 +166,10 @@
             Updated Maven plugins.
          </action>
       </release>
+      <release version="1.4.0" date="2020-06-26" description="Updated plugins">
+         <action dev="bmg" type="update">
+            Updated Maven plugins.
+         </action>
+      </release>
    </body>
 </document>
