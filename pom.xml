@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.3.2</version>
+   <version>1.3.3</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -318,14 +318,14 @@
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
-      <extension.wagon.version>2.12</extension.wagon.version>
+      <extension.wagon.version>3.4.1</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.0.6</site.skin.version>
+      <site.skin.version>2.0.7</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
