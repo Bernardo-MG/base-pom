@@ -296,7 +296,7 @@
       <plugin.dependency.version>3.1.2</plugin.dependency.version>
       <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
       <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
-      <plugin.failsafe.version>3.0.0-M5</plugin.failsafe.version>
+      <plugin.failsafe.version>2.22.2</plugin.failsafe.version>
       <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
       <plugin.install.version>3.0.0-M1</plugin.install.version>
       <plugin.jacoco.version>0.8.5</plugin.jacoco.version>
@@ -311,7 +311,7 @@
       <plugin.resources.version>3.1.0</plugin.resources.version>
       <plugin.site.version>3.9.1</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
-      <plugin.surefire.version>3.0.0-M5</plugin.surefire.version>
+      <plugin.surefire.version>2.22.2</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <plugin.versions.version>2.7</plugin.versions.version>
       <plugin.war.version>3.3.0</plugin.war.version>
