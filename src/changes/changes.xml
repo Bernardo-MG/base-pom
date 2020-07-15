@@ -179,5 +179,7 @@
             Using Github actions for CI.
          </action>
       </release>
+      <release version="1.4.0" date="2020-07-15" description="Test plugins correction">
+      </release>
    </body>
 </document>
