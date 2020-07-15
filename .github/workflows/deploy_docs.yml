@@ -30,6 +30,8 @@ jobs:
       uses: bernardo-mg/deployment-maven-settings-action@master
       with:
         version-type: ${{ steps.extract_branch.outputs.branch }}
+        deployment-profile: deployment-release-pom
+        deployment-develop-profile: deployment-development-pom
       env:
         DEPLOY_DOCS_USER: ${{ secrets.DEPLOY_DOCS_USER }}
         DEPLOY_DOCS_PASSWORD: ${{ secrets.DEPLOY_DOCS_PASSWORD }}
