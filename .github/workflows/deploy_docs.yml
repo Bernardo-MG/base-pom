@@ -38,4 +38,4 @@ jobs:
         DEPLOY_DOCS_SITE: ${{ secrets.DEPLOY_DOCS_SITE }}
         DEPLOY_DOCS_DEVELOP_SITE: ${{ secrets.DEPLOY_DOCS_DEVELOP_SITE }}
     - name: Deploy docs
-      run: mvn site site:deploy -B -P deployment --settings settings.xml
+      run: mvn site site:deploy -B -P deployment,config,site --settings settings.xml
