@@ -171,7 +171,7 @@
             Updated Wagon.
          </action>
       </release>
-      <release version="1.4.0" date="2020-07-02" description="Test plugins correction">
+      <release version="1.3.4" date="2020-07-15" description="Test plugins correction">
          <action dev="bmg" type="fix">
             Set test plugins to a more stable version.
          </action>
