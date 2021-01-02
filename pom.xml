@@ -299,22 +299,22 @@
       <plugin.failsafe.version>2.22.2</plugin.failsafe.version>
       <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
       <plugin.install.version>3.0.0-M1</plugin.install.version>
-      <plugin.jacoco.version>0.8.5</plugin.jacoco.version>
+      <plugin.jacoco.version>0.8.6</plugin.jacoco.version>
       <plugin.jar.version>3.2.0</plugin.jar.version>
       <plugin.javadoc.version>3.2.0</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>3.0.0</plugin.jxr.version>
       <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
-      <plugin.pmd.version>3.13.0</plugin.pmd.version>
+      <plugin.pmd.version>3.14.0</plugin.pmd.version>
       <plugin.release.version>3.0.0-M1</plugin.release.version>
-      <plugin.reports.version>3.1.0</plugin.reports.version>
-      <plugin.resources.version>3.1.0</plugin.resources.version>
+      <plugin.reports.version>3.1.1</plugin.reports.version>
+      <plugin.resources.version>3.2.0</plugin.resources.version>
       <plugin.site.version>3.9.1</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
-      <plugin.versions.version>2.7</plugin.versions.version>
-      <plugin.war.version>3.3.0</plugin.war.version>
+      <plugin.versions.version>2.8.1</plugin.versions.version>
+      <plugin.war.version>3.3.1</plugin.war.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
