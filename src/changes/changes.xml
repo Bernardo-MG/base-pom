@@ -189,5 +189,7 @@
             Removed Findbugs, as it is no longer maintained.
          </action>
       </release>
+      <release version="1.4.0" date="2021-02-20" description="">
+      </release>
    </body>
 </document>
