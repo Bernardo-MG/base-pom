@@ -33,7 +33,6 @@ Some of these may be repeated from the build section. In that case it usually me
 - [Changes](https://maven.apache.org/plugins/maven-changes-plugin/), generates the changes report from the changes log.
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/), checks that the source files comply with style standards.
 - [Dependency](https://maven.apache.org/plugins/maven-dependency-plugin/), generates the dependencies analysis report.
-- [FindBugs](http://gleclaire.github.io/findbugs-maven-plugin/), checks for patterns which are prone to errors.
 - [JaCoCo](http://eclemma.org/jacoco/trunk/doc/maven.html), generates coverage reports from Surefire and Failsafe.
 - [JDepend](http://www.mojohaus.org/jdepend-maven-plugin/), generates the dependencies report.
 - [Javadoc](https://maven.apache.org/plugins/maven-javadoc-plugin/), generates the Javadocs.

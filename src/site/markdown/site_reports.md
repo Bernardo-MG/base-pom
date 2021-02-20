@@ -10,7 +10,6 @@ The following reports come included in the new project and will be added to the 
 
 - [Tag list](http://www.mojohaus.org)
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/)
-- [FindBugs](http://gleclaire.github.io/findbugs-maven-plugin/)
 - [PMD](http://maven.apache.org/plugins/maven-pmd-plugin/)
 - [Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/)
 - [Failsafe](https://maven.apache.org/surefire/maven-failsafe-plugin/)

@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.3.5</version>
+   <version>1.3.6</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -297,7 +297,6 @@
       <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
       <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
       <plugin.failsafe.version>2.22.2</plugin.failsafe.version>
-      <plugin.findbugs.version>3.0.5</plugin.findbugs.version>
       <plugin.install.version>3.0.0-M1</plugin.install.version>
       <plugin.jacoco.version>0.8.6</plugin.jacoco.version>
       <plugin.jar.version>3.2.0</plugin.jar.version>
@@ -325,7 +324,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.0.10</site.skin.version>
+      <site.skin.version>2.0.11</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -427,13 +426,6 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-failsafe-plugin</artifactId>
                <version>${plugin.failsafe.version}</version>
-            </plugin>
-            <plugin>
-               <!-- FindBugs -->
-               <!-- Checks for patterns which are prone to errors. -->
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>findbugs-maven-plugin</artifactId>
-               <version>${plugin.findbugs.version}</version>
             </plugin>
             <plugin>
                <!-- Install -->
@@ -881,16 +873,6 @@
                   </reports>
                </reportSet>
             </reportSets>
-         </plugin>
-         <plugin>
-            <!-- FindBugs -->
-            <!-- Checks for patterns which are prone to errors. -->
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <configuration>
-               <effort>Max</effort>
-               <threshold>Low</threshold>
-            </configuration>
          </plugin>
          <plugin>
             <!-- PMD -->
