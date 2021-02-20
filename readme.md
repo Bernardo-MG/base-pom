@@ -33,7 +33,7 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
 ```
-$ mvn site -P site,config
+mvn site -P site,config
 ```
 
 ## Usage
@@ -55,7 +55,7 @@ The POM can be used by just adding the following lines to the Maven POM for your
 If needed, the project can be added to the local Maven repository with the following command:
 
 ```
-$ mvn install -P config
+mvn install -P config
 ```
 
 ## Collaborate
