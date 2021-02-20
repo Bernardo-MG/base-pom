@@ -12,12 +12,11 @@ This is a generic base POM, useful for any kind of project, no matter what actua
 
 ## Features
 
-- Reduces the need to set up new Maven-based Java projects.
+- Reduces initial configuration for Maven-based Java projects.
 - Sets up the encoding and Java version of the project.
 - Common build and report plugins.
 - Validation rules, including dependency convergence.
 - Basic configuration, such as a default manifest file.
-- Support for JDK7 onward.
 - Sets the project default encoding to UTF-8.
 
 ## Documentation

@@ -7,7 +7,7 @@ The following properties are set, these are used to define values manually and c
 |Variable|Value|Usage|
 |---|---|---|
 |files.encoding|UTF-8|Defines the file encoding|
-|java.version|1.7|Defines the JDK version|
+|java.version|1.8|Defines the JDK version|
 
 The following properties are set, these are used by Maven plugins:
 
