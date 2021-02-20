@@ -8,12 +8,13 @@ Maven, thanks to its plugins, allows generating a full array of verifications wh
 
 The following reports come included in the new project and will be added to the site:
 
-- [Tag list](http://www.mojohaus.org)
+- [Tag list](https://www.mojohaus.org)
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/)
-- [PMD](http://maven.apache.org/plugins/maven-pmd-plugin/)
-- [Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/)
 - [Failsafe](https://maven.apache.org/surefire/maven-failsafe-plugin/)
-- [JaCoCo](http://www.eclemma.org/jacoco/trunk/doc/maven.html)
+- [JaCoCo](https://www.eclemma.org/jacoco/trunk/doc/maven.html)
 - [JDepend](mojo.codehaus.org/jdepend-maven-plugin)
+- [PMD](https://maven.apache.org/plugins/maven-pmd-plugin/)
+- [SpotBugs](https://spotbugs.github.io/spotbugs-maven-plugin/)
+- [Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/)
 
 [maven-site]: http://maven.apache.org/guides/mini/guide-site.html

@@ -40,5 +40,6 @@ Some of these may be repeated from the build section. In that case it usually me
 - [PMD](https://maven.apache.org/plugins/maven-pmd-plugin/), checks that the code complies with a series of code quality rules.
 - [Project Info](https://maven.apache.org/plugins/maven-project-info-reports-plugin/), generates general information reports.
 - [Site](https://maven.apache.org/plugins/maven-site-plugin/), generates the Maven Site.
+- [SpotBugs](https://spotbugs.github.io/spotbugs-maven-plugin/), checks for patterns which are prone to errors.
 - [Surefire Report](https://maven.apache.org/surefire/maven-surefire-report-plugin/), generates the unit tests report.
 - [Taglist](http://www.mojohaus.org/taglist-maven-plugin/), generates a report of all the temporal tags still on the code.
