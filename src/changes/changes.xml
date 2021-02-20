@@ -189,7 +189,10 @@
             Removed Findbugs, as it is no longer maintained.
          </action>
       </release>
-      <release version="1.4.0" date="2021-02-20" description="">
+      <release version="1.4.0" date="2021-02-20" description="Added SpotBugs">
+         <action dev="bmg" type="add">
+            Added SpotBugs plugin.
+         </action>
       </release>
    </body>
 </document>
