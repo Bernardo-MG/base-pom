@@ -194,5 +194,7 @@
             Added SpotBugs plugin.
          </action>
       </release>
+      <release version="1.5.0" date="2021-02-20" description="">
+      </release>
    </body>
 </document>
