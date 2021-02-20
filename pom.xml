@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.3.6</version>
+   <version>1.4.0</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -75,8 +75,7 @@
       <profile>
          <!-- Profile for the Eclipse Maven plugin. -->
          <!-- Fixes the errors from unregistered goals. -->
-         <!-- It will be activated automatically on Eclipse if this has the 
-            m2e plugin, by detecting the version property. -->
+         <!-- It will be activated automatically on Eclipse if this has the m2e plugin, by detecting the version property. -->
          <id>eclipse-maven</id>
          <activation>
             <property>
@@ -88,10 +87,8 @@
                <plugins>
                   <plugin>
                      <!-- m2e lifecycle mapping. -->
-                     <!-- This is used to configure the Maven plugin for 
-                        Eclipse. -->
-                     <!-- Among other things, it allows registering goals, 
-                        which Eclipse would otherwise reject. -->
+                     <!-- This is used to configure the Maven plugin for Eclipse. -->
+                     <!-- Among other things, it allows registering goals, which Eclipse would otherwise reject. -->
                      <!-- It has no real effect on Maven. -->
                      <groupId>org.eclipse.m2e</groupId>
                      <artifactId>lifecycle-mapping</artifactId>
@@ -127,8 +124,7 @@
       </profile>
       <profile>
          <!-- Site generation profile. -->
-         <!-- Sets the dependencies for the documentation generation and 
-            deployment. -->
+         <!-- Sets the dependencies for the documentation generation and deployment. -->
          <id>site</id>
          <properties>
             <!-- Maven Site -->
@@ -310,6 +306,7 @@
       <plugin.resources.version>3.2.0</plugin.resources.version>
       <plugin.site.version>3.9.1</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
+      <plugin.spotbugs.version>4.2.0</plugin.spotbugs.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
       <plugin.taglist.version>2.4</plugin.taglist.version>
       <plugin.versions.version>2.8.1</plugin.versions.version>
@@ -345,8 +342,7 @@
       <pluginManagement>
          <plugins>
             <!-- Plugin versions and configurations are enforced here. -->
-            <!-- Some of these plugins are added by default by Maven in some 
-               situations. Others are just useful. -->
+            <!-- Some of these plugins are added by default by Maven in some situations. Others are just useful. -->
             <plugin>
                <!-- Ant Run -->
                <!-- Capable of handling Ant scripts. -->
@@ -407,15 +403,13 @@
             <plugin>
                <!-- Deploy -->
                <!-- Takes care of the deployment phase -->
-               <!-- It is set to generate and deploy a POM file along the 
-                  artifact -->
+               <!-- It is set to generate and deploy a POM file along the artifact -->
                <artifactId>maven-deploy-plugin</artifactId>
                <version>${plugin.deploy.version}</version>
             </plugin>
             <plugin>
                <!-- Enforcer -->
-               <!-- Stops the project from being built if it does not comply 
-                  with a set of rules. -->
+               <!-- Stops the project from being built if it does not comply with a set of rules. -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-enforcer-plugin</artifactId>
                <version>${plugin.enforcer.version}</version>
@@ -463,8 +457,7 @@
             </plugin>
             <plugin>
                <!-- JXR -->
-               <!-- Generates references to the source files, used by other 
-                  reports. -->
+               <!-- Generates references to the source files, used by other reports. -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-jxr-plugin</artifactId>
                <version>${plugin.jxr.version}</version>
@@ -478,8 +471,7 @@
             </plugin>
             <plugin>
                <!-- PMD -->
-               <!-- Checks that the code complies with a series of code quality 
-                  rules. -->
+               <!-- Checks that the code complies with a series of code quality rules. -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-pmd-plugin</artifactId>
                <version>${plugin.pmd.version}</version>
@@ -512,6 +504,13 @@
                <version>${plugin.source.version}</version>
             </plugin>
             <plugin>
+               <!-- SpotBugs -->
+               <!-- Checks for patterns which are prone to errors. -->
+               <groupId>com.github.spotbugs</groupId>
+               <artifactId>spotbugs-maven-plugin</artifactId>
+               <version>${plugin.spotbugs.version}</version>
+            </plugin>
+            <plugin>
                <!-- Surefire -->
                <!-- Runs unit tests. -->
                <groupId>org.apache.maven.plugins</groupId>
@@ -527,16 +526,14 @@
             </plugin>
             <plugin>
                <!-- Taglist -->
-               <!-- Generates a report of all the temporal tags still on 
-                  the code. -->
+               <!-- Generates a report of all the temporal tags still on the code. -->
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>taglist-maven-plugin</artifactId>
                <version>${plugin.taglist.version}</version>
             </plugin>
             <plugin>
                <!-- Versions -->
-               <!-- Generates a report with the versions of all plugins and 
-                  dependencies. -->
+               <!-- Generates a report with the versions of all plugins and dependencies. -->
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>versions-maven-plugin</artifactId>
                <version>${plugin.versions.version}</version>
@@ -570,8 +567,7 @@
          <!-- Also, project specific configuration is added here. -->
          <plugin>
             <!-- Enforcer -->
-            <!-- Stops the project from being built if it does not comply 
-               with a set of rules. -->
+            <!-- Stops the project from being built if it does not comply with a set of rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
             <executions>
@@ -598,8 +594,7 @@
                   <configuration>
                      <rules>
                         <!-- Dependencies convergence. -->
-                        <!-- This variant of the rule requires less configuration, 
-                           making use of Maven's dependency resolver. -->
+                        <!-- This variant of the rule requires less configuration, making use of Maven's dependency resolver. -->
                         <requireUpperBoundDeps />
                      </rules>
                   </configuration>
@@ -661,8 +656,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
             <executions>
-               <!-- Failsafe is bound to the integration-test and verify 
-                  phases -->
+               <!-- Failsafe is bound to the integration-test and verify phases -->
                <execution>
                   <id>failsafe-integration-tests</id>
                   <goals>
@@ -788,8 +782,7 @@
          </plugin>
          <plugin>
             <!-- JXR -->
-            <!-- Generates references to the source files, used by other 
-               reports. -->
+            <!-- Generates references to the source files, used by other reports. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
          </plugin>
@@ -827,8 +820,7 @@
          </plugin>
          <plugin>
             <!-- Taglist -->
-            <!-- Generates a report of all the temporal tags still on the 
-               code. -->
+            <!-- Generates a report of all the temporal tags still on the code. -->
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>taglist-maven-plugin</artifactId>
             <configuration>
@@ -876,8 +868,7 @@
          </plugin>
          <plugin>
             <!-- PMD -->
-            <!-- Checks that the code complies with a series of code quality 
-               rules. -->
+            <!-- Checks that the code complies with a series of code quality rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
             <configuration>
@@ -910,6 +901,16 @@
             <!-- Generates the dependencies report. -->
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>jdepend-maven-plugin</artifactId>
+         </plugin>
+         <plugin>
+            <!-- SpotBugs -->
+            <!-- Checks for patterns which are prone to errors. -->
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-maven-plugin</artifactId>
+            <configuration>
+               <effort>Max</effort>
+               <threshold>Low</threshold>
+            </configuration>
          </plugin>
       </plugins>
    </reporting>

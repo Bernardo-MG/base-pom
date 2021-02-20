@@ -4,8 +4,6 @@ Parent [Maven POM][maven-pom-intro] setting up a Maven project for common usage,
 
 This is a generic base POM, useful for any kind of project, no matter what actual technologies they are based on, and will add no dependency, apart from the plugins.
 
-**JDK support:** *the POM only supports JDK 1.7 onward, due to the plugins included.*
-
 [![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven/base-pom.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
@@ -14,12 +12,11 @@ This is a generic base POM, useful for any kind of project, no matter what actua
 
 ## Features
 
-- Reduces the need to set up new Maven-based Java projects.
+- Reduces initial configuration for Maven-based Java projects.
 - Sets up the encoding and Java version of the project.
 - Common build and report plugins.
 - Validation rules, including dependency convergence.
 - Basic configuration, such as a default manifest file.
-- Support for JDK7 onward.
 - Sets the project default encoding to UTF-8.
 
 ## Documentation
@@ -35,23 +32,12 @@ Documentation is also generated from the latest snapshot, taken from the 'develo
 The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
 
 ```
-$ mvn site -P site,config
+mvn site -P site,config
 ```
 
 ## Usage
 
 The application is a XML file, a Maven POM file.
-
-### Prerequisites
-
-The project has been tested on the following Java versions:
-* JDK 8
-* JDK 7
-* OpenJDK 7
-
-As a Maven parent POM, it also requires Maven.
-
-Additional dependencies, mostly plugins, will be handled automatically through Maven.
 
 ### Installing
 
@@ -68,7 +54,7 @@ The POM can be used by just adding the following lines to the Maven POM for your
 If needed, the project can be added to the local Maven repository with the following command:
 
 ```
-$ mvn install -P config
+mvn install -P config
 ```
 
 ## Collaborate
