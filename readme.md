@@ -4,8 +4,6 @@ Parent [Maven POM][maven-pom-intro] setting up a Maven project for common usage,
 
 This is a generic base POM, useful for any kind of project, no matter what actual technologies they are based on, and will add no dependency, apart from the plugins.
 
-**JDK support:** *the POM only supports JDK 1.7 onward, due to the plugins included.*
-
 [![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven/base-pom.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
@@ -41,17 +39,6 @@ $ mvn site -P site,config
 ## Usage
 
 The application is a XML file, a Maven POM file.
-
-### Prerequisites
-
-The project has been tested on the following Java versions:
-* JDK 8
-* JDK 7
-* OpenJDK 7
-
-As a Maven parent POM, it also requires Maven.
-
-Additional dependencies, mostly plugins, will be handled automatically through Maven.
 
 ### Installing
 
