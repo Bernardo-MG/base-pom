@@ -83,5 +83,5 @@ The project has been released under the [MIT License][license].
 [issues]: https://github.com/Bernardo-MG/base-pom/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/Bernardo-MG/base-pom
-[site-develop]: http://docs.bernardomg.com/development/maven/base-pom
-[site-release]: http://docs.bernardomg.com/maven/base-pom
+[site-develop]: https://docs.bernardomg.com/development/maven/base-pom
+[site-release]: https://docs.bernardomg.com/maven/base-pom
