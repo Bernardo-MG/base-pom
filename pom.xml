@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.4.0</version>
+   <version>1.4.1</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -52,20 +52,20 @@
       <notifiers />
    </ciManagement>
 
-   <distributionManagement>
+   <repositories>
       <repository>
-         <uniqueVersion>false</uniqueVersion>
-         <id>releases</id>
-         <name>Releases Repository</name>
-         <url>https://api.bintray.com/maven/bernardo-mg/maven/base-pom</url>
+         <!-- Github repository -->
+         <id>github</id>
+         <name>GitHub Packages</name>
+         <url>https://maven.pkg.github.com/Bernardo-MG/base-pom</url>
       </repository>
-      <snapshotRepository>
-         <uniqueVersion>false</uniqueVersion>
-         <id>snapshots</id>
-         <name>Snapshots Repository</name>
-         <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
-      </snapshotRepository>
-   </distributionManagement>
+      <repository>
+         <!-- OSSRH repository -->
+         <id>ossrh</id>
+         <name>Central Repository OSSRH</name>
+         <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      </repository>
+   </repositories>
 
    <!-- ********************************************** -->
    <!-- ****************** PROFILES ****************** -->
@@ -128,7 +128,6 @@
          <id>site</id>
          <properties>
             <!-- Maven Site -->
-            <bintrayURL>https://bintray.com/bernardo-mg/maven/base-pom/view</bintrayURL>
             <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom</mavenURL>
          </properties>
          <build>
