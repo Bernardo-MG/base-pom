@@ -52,21 +52,6 @@
       <notifiers />
    </ciManagement>
 
-   <repositories>
-      <repository>
-         <!-- Github repository -->
-         <id>github</id>
-         <name>GitHub Packages</name>
-         <url>https://maven.pkg.github.com/Bernardo-MG/base-pom</url>
-      </repository>
-      <repository>
-         <!-- OSSRH repository -->
-         <id>ossrh</id>
-         <name>Central Repository OSSRH</name>
-         <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-      </repository>
-   </repositories>
-
    <!-- ********************************************** -->
    <!-- ****************** PROFILES ****************** -->
    <!-- ********************************************** -->
@@ -210,6 +195,30 @@
             <!-- Tests are skipped -->
             <maven.test.skip>true</maven.test.skip>
          </properties>
+      </profile>
+      <profile>
+         <!-- Github deployment profile. -->
+         <id>deployment</id>
+         <distributionManagement>
+            <repository>
+               <!-- Github repository -->
+               <id>github</id>
+               <name>GitHub Packages</name>
+               <url>https://maven.pkg.github.com/Bernardo-MG/base-pom</url>
+            </repository>
+         </distributionManagement>
+      </profile>
+      <profile>
+         <!-- OSSRH deployment profile. -->
+         <id>deployment</id>
+         <distributionManagement>
+            <repository>
+               <!-- OSSRH repository -->
+               <id>ossrh</id>
+               <name>Central Repository OSSRH</name>
+               <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            </repository>
+         </distributionManagement>
       </profile>
       <profile>
          <!-- Configuration profile -->
