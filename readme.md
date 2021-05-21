@@ -5,7 +5,6 @@ Parent [Maven POM][maven-pom-intro] setting up a Maven project for common usage,
 This is a generic base POM, useful for any kind of project, no matter what actual technologies they are based on, and will add no dependency, apart from the plugins.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven/base-pom.svg)][maven-repo]
-[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/base-pom/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -78,7 +77,6 @@ The project has been released under the [MIT License][license].
 
 [maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
 
-[bintray-repo]: https://bintray.com/bernardo-mg/maven/base-pom/view
 [maven-repo]: http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom
 [issues]: https://github.com/Bernardo-MG/base-pom/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
