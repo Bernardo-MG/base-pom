@@ -198,7 +198,7 @@
       </profile>
       <profile>
          <!-- Github deployment profile. -->
-         <id>deployment</id>
+         <id>deployment-github</id>
          <distributionManagement>
             <repository>
                <!-- Github repository -->
@@ -210,7 +210,7 @@
       </profile>
       <profile>
          <!-- OSSRH deployment profile. -->
-         <id>deployment</id>
+         <id>deployment-ossrh</id>
          <distributionManagement>
             <repository>
                <!-- OSSRH repository -->
