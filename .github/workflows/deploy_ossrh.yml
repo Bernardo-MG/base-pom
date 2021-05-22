@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
 
-    environment: deployment
+    environment: deployment_ossrh
     runs-on: ubuntu-latest
 
     steps:
@@ -24,10 +24,6 @@ jobs:
         server-password: MAVEN_PASSWORD
         gpg-private-key: GPG_PRIVATE_KEY
         gpg-passphrase: GPG_PASSPHRASE
-    - name: Set up GPG
-      run: |
-         echo $GPG_PRIVATE_KEY | base64 --decode | gpg --import
-         echo $GPG_OWNERTRUST | base64 --decode | gpg --import-ownertrust
     - name: Deploy
       run: mvn deploy -B -P deployment,config,site,deployment-release-pom,deployment-ossrh
       env:
