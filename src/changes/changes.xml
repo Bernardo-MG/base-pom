@@ -199,5 +199,10 @@
             Extended and updated deployment config.
          </action>
       </release>
+      <release version="1.4.2" date="2021-05-23" description="Deployment update">
+         <action dev="bmg" type="add">
+            Corrected artifact signature.
+         </action>
+      </release>
    </body>
 </document>
