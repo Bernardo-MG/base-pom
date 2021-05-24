@@ -114,6 +114,7 @@
          <properties>
             <!-- Maven Site -->
             <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom</mavenURL>
+            <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=base-pom]]></githubArtifactURL>
          </properties>
          <build>
             <plugins>
@@ -361,7 +362,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.0.11</site.skin.version>
+      <site.skin.version>2.2.0</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
