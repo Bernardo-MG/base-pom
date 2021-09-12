@@ -209,5 +209,10 @@
             Updated plugins.
          </action>
       </release>
+      <release version="1.4.4" date="2021-09-12" description="Updated plugins">
+         <action dev="bmg" type="update">
+            Updated plugins.
+         </action>
+      </release>
    </body>
 </document>
