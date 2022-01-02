@@ -345,7 +345,7 @@
       <plugin.release.version>3.0.0-M4</plugin.release.version>
       <plugin.reports.version>3.1.2</plugin.reports.version>
       <plugin.resources.version>3.2.0</plugin.resources.version>
-      <plugin.site.version>3.9.1</plugin.site.version>
+      <plugin.site.version>3.10.0</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
       <plugin.spotbugs.version>4.3.0</plugin.spotbugs.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
