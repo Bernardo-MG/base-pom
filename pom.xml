@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.4.4</version>
+   <version>1.5.0</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -175,31 +175,37 @@
             </site>
          </distributionManagement>
       </profile>
+      <!-- ============================================== -->
+      <!-- ============ DEPLOYMENT PROFILES ============= -->
+      <!-- ============================================== -->
       <profile>
-         <!-- Development deployment profile. -->
-         <!-- Sets the site repository to point to the development repo. -->
-         <id>deployment-development-pom</id>
+         <!-- Site deployment profile -->
+         <!-- Sets the site repository to point to the releases repo -->
+         <id>deployment-site</id>
+         <activation>
+            <!-- Active by default so the repository appears in the reports -->
+            <activeByDefault>true</activeByDefault>
+         </activation>
+         <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
+         </properties>
          <distributionManagement>
             <site>
-               <id>site-development</id>
-               <name>Project Development Documentation Site</name>
+               <id>site</id>
+               <name>Project Documentation Site</name>
                <!-- The URL should be set externally -->
-               <url>${site.develop.url}</url>
+               <url>${site.url}</url>
             </site>
          </distributionManagement>
       </profile>
       <profile>
-         <!-- Deployment profile. -->
-         <!-- Sets ups the environment for deployment. -->
-         <id>deployment</id>
-         <properties>
-            <!-- Tests are skipped -->
-            <maven.test.skip>true</maven.test.skip>
-         </properties>
-      </profile>
-      <profile>
          <!-- Github deployment profile. -->
          <id>deployment-github</id>
+         <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
+         </properties>
          <distributionManagement>
             <repository>
                <!-- Github repository -->
@@ -212,6 +218,10 @@
       <profile>
          <!-- OSSRH deployment profile. -->
          <id>deployment-ossrh</id>
+         <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
+         </properties>
          <distributionManagement>
             <repository>
                <!-- OSSRH repository -->
@@ -251,18 +261,6 @@
                </plugin>
             </plugins>
          </build>
-      </profile>
-      <profile>
-         <!-- Configuration profile -->
-         <!-- For configuration data which should not be inherited -->
-         <id>config</id>
-         <activation>
-            <activeByDefault>true</activeByDefault>
-         </activation>
-         <properties>
-            <!-- Manifest data -->
-            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
-         </properties>
       </profile>
    </profiles>
 
@@ -309,7 +307,7 @@
       <!-- ============================================== -->
       <!-- ================ JAVA VERSION ================ -->
       <!-- ============================================== -->
-      <java.version>1.8</java.version>
+      <java.version>11</java.version>
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <!-- ============================================== -->
@@ -345,7 +343,7 @@
       <plugin.release.version>3.0.0-M4</plugin.release.version>
       <plugin.reports.version>3.1.2</plugin.reports.version>
       <plugin.resources.version>3.2.0</plugin.resources.version>
-      <plugin.site.version>3.9.1</plugin.site.version>
+      <plugin.site.version>3.10.0</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
       <plugin.spotbugs.version>4.3.0</plugin.spotbugs.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
@@ -362,7 +360,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.2.4</site.skin.version>
+      <site.skin.version>2.2.5</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
