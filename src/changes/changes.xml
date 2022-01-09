@@ -214,6 +214,9 @@
             Dropped support for JDK 8.
          </action>
          <action dev="bmg" type="update">
+            Updated plugins.
+         </action>
+         <action dev="bmg" type="update">
             Updated CI config.
          </action>
       </release>
