@@ -2,14 +2,14 @@
 
 ## Properties
 
-The following properties are set, these are used to define values manually and can be overwritten to change the configuration:
+These are used to define values manually and can be overwritten to change the configuration:
 
 |Variable|Value|Usage|
 |---|---|---|
 |files.encoding|UTF-8|Defines the file encoding|
 |java.version|1.8|Defines the JDK version|
 
-The following properties are set, these are used by Maven plugins:
+These are used by Maven plugins:
 
 |Variable|Value|Usage|
 |---|---|---|

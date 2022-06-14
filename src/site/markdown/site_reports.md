@@ -1,12 +1,8 @@
 # Site
 
-Various [Maven Site][maven-site] reports come ready to be created when generating said site.
-
 ## Reports
 
-Maven, thanks to its plugins, allows generating a full array of verifications which otherwise would require from external services or applications. The results from their analysis are reported in the Maven site, and they cover common things such as code quality or test coverage.
-
-The following reports come included in the new project and will be added to the site:
+The following reports come included in the new project and will be added to the [Maven site][maven-site]:
 
 - [Tag list](https://www.mojohaus.org)
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/)
