@@ -53,7 +53,7 @@ The POM can be used by just adding the following lines to the Maven POM for your
 If needed, the project can be added to the local Maven repository with the following command:
 
 ```
-mvn install -P config
+mvn install
 ```
 
 ## Collaborate
