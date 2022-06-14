@@ -57,56 +57,6 @@
    <!-- ********************************************** -->
 
    <profiles>
-      <profile>
-         <!-- Profile for the Eclipse Maven plugin. -->
-         <!-- Fixes the errors from unregistered goals. -->
-         <!-- It will be activated automatically on Eclipse if this has the m2e plugin, by detecting the version property. -->
-         <id>eclipse-maven</id>
-         <activation>
-            <property>
-               <name>m2e.version</name>
-            </property>
-         </activation>
-         <build>
-            <pluginManagement>
-               <plugins>
-                  <plugin>
-                     <!-- m2e lifecycle mapping. -->
-                     <!-- This is used to configure the Maven plugin for Eclipse. -->
-                     <!-- Among other things, it allows registering goals, which Eclipse would otherwise reject. -->
-                     <!-- It has no real effect on Maven. -->
-                     <groupId>org.eclipse.m2e</groupId>
-                     <artifactId>lifecycle-mapping</artifactId>
-                     <version>${plugin.lifecycle.version}</version>
-                     <configuration>
-                        <lifecycleMappingMetadata>
-                           <pluginExecutions>
-                              <pluginExecution>
-                                 <!-- JaCoCo plugin -->
-                                 <pluginExecutionFilter>
-                                    <groupId>org.jacoco</groupId>
-                                    <artifactId>jacoco-maven-plugin</artifactId>
-                                    <versionRange>[0.5,)</versionRange>
-                                    <goals>
-                                       <!-- Registers goals into m2e. -->
-                                       <goal>prepare-agent</goal>
-                                    </goals>
-                                 </pluginExecutionFilter>
-                                 <action>
-                                    <!-- Ignored to avoid error alerts. -->
-                                    <ignore />
-                                 </action>
-                              </pluginExecution>
-                           </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                        <downloadSources>true</downloadSources>
-                        <downloadJavadocs>true</downloadJavadocs>
-                     </configuration>
-                  </plugin>
-               </plugins>
-            </pluginManagement>
-         </build>
-      </profile>
       <!-- ============================================== -->
       <!-- ============ DEPLOYMENT PROFILES ============= -->
       <!-- ============================================== -->
@@ -318,7 +268,6 @@
       <plugin.javadoc.version>3.4.0</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>3.2.0</plugin.jxr.version>
-      <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
       <plugin.pmd.version>3.17.0</plugin.pmd.version>
       <plugin.release.version>3.0.0-M4</plugin.release.version>
       <plugin.reports.version>3.3.0</plugin.reports.version>
