@@ -1,44 +1,32 @@
 # Build validation
 
-By using the base POM as the parent POM some validation rules will be added to the inheritor project.
-
-Some of these rules can be harsh, and all will stop the building procedure if their criteria are not met. This way they ensure that the project is correctly configured before compiling.
-
-Of course all the usual Maven validations apply, these are just an additional layer of robustness for the build.
+The POM will enforce a set of validation rules. A bunch of them can be harsh, as they will stop any project from building if their criteria are not met. But this also ensures that the project only generates stable artifacts, adding an additional layer of robustness.
 
 ## Enforcer
 
-Most of the validation is taken care by the [Maven Enforcer Plugin][enforcer-plugin].
-
-It includes several rules, all defined in its configuration node, which are not meant to be disabled or overriden. Still, if for some reason this was needed each of them, as described below, has its own id.
+Most validation rules come from the [Maven Enforcer Plugin][enforcer-plugin].
 
 ### Dependencies convergence rule
 
-Dependency convergence just means that when several versions of a same dependency appear only one of them should be used.
+Dependency convergence applies when there are several transitive dependencies to a single artifact, but with multiple versions of it. This rule makes sure only one of those versions is used. While Maven does this by default, this is error prone. As it will take first version it finds. There is no way to predict which one it will be.
 
-Maven already does this by default, taking only the first version found, which is error prone. The alternative is excluding all the unwanted versions, but this is not only error prone too, it is also tedious.
-
-While the basic convergence rule forces the project to manually exclude all the conflicts, the more lenient *requireUpperBoundDeps* rule only requires ensuring that Maven ends using the latest version for all the transitive dependencies.
-
-Which means that fixing dependency convergence conflicts just requires adding the latest version of the library to the POM.
+This is fixed with the *requireUpperBoundDeps*. This means that the enforcer will stop building with convergence errors, and these errors can be fixed by declaring the latest version of the library in the POM.
 
 ###  Required Java version rule
 
-The Java version set in the *maven.compiler.source* property will be required when compiling. If using one older the one defined for compilation the compilation process will fail.
+The *maven.compiler.source* property sets the minimum Java version for the project. This rule stops the project from building when using an older Java version.
 
 ###  Required Maven version rule
 
-Only current Maven versions are accepted when building the project, if the project is compiled by using one version older the one defined for compilation the compilation process will fail.
-
-It will check for Maven 3.0.1 by default, but if the *maven.version* property is changed then that version will be used in the rule.
+The *maven.version* property sets the minimum Maven version for the project. This rule stops the project from building when using an older Maven version.
 
 ### Plugin versions rule
 
-This rule requires that all the plugins set in the POM have a version defined for them.
+This rule requires that all the plugins set in the POM have a version defined.
 
 ### Required properties rule
 
-The following properties are required to be set as part of the POM properties:
+The following properties are required as part of the POM properties:
 
 #### Manifest
 
@@ -48,7 +36,7 @@ The following properties are required to be set as part of the POM properties:
 
 ## Overriding enforcer rules
 
-Each validation rule is bound to a different execution, each with its own id. It is not recommended editing them in any way, still the possibility is there if needed.
+These rules are not meant to be disabled. But it is possible to override them, as each is executed with their own unique id.
 
 |Rule|Id|
 |---|---|
@@ -57,9 +45,9 @@ Each validation rule is bound to a different execution, each with its own id. It
 |Plugin versions|enforce-pluginVersion|
 |Manifest|enforce-manifest|
 
-## Additional verifications
+## Additional validations
 
-Some of the [reports][reports] included for the Maven site will indicate possible problems to fix and correct. 
+Some of the [reports][reports] will show possible problems to fix and correct. 
 
 While a few of these problems can be important, and probably should be fixed before any release, the plugins are not set to stop the build when they are found. But if needed the plugins can be set up to ensure all these verifications pass, and stop the build if they don't.
 
