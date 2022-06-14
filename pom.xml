@@ -14,7 +14,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.5.0</version>
+   <version>1.5.1</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -57,65 +57,32 @@
    <!-- ********************************************** -->
 
    <profiles>
+      <!-- ============================================== -->
+      <!-- ============ DEPLOYMENT PROFILES ============= -->
+      <!-- ============================================== -->
       <profile>
-         <!-- Profile for the Eclipse Maven plugin. -->
-         <!-- Fixes the errors from unregistered goals. -->
-         <!-- It will be activated automatically on Eclipse if this has the m2e plugin, by detecting the version property. -->
-         <id>eclipse-maven</id>
+         <!-- Site deployment profile -->
+         <!-- Sets the site repository to point to the releases repo -->
+         <id>deployment-site</id>
          <activation>
-            <property>
-               <name>m2e.version</name>
-            </property>
+            <!-- Active by default so the repository appears in the reports -->
+            <activeByDefault>true</activeByDefault>
          </activation>
-         <build>
-            <pluginManagement>
-               <plugins>
-                  <plugin>
-                     <!-- m2e lifecycle mapping. -->
-                     <!-- This is used to configure the Maven plugin for Eclipse. -->
-                     <!-- Among other things, it allows registering goals, which Eclipse would otherwise reject. -->
-                     <!-- It has no real effect on Maven. -->
-                     <groupId>org.eclipse.m2e</groupId>
-                     <artifactId>lifecycle-mapping</artifactId>
-                     <version>${plugin.lifecycle.version}</version>
-                     <configuration>
-                        <lifecycleMappingMetadata>
-                           <pluginExecutions>
-                              <pluginExecution>
-                                 <!-- JaCoCo plugin -->
-                                 <pluginExecutionFilter>
-                                    <groupId>org.jacoco</groupId>
-                                    <artifactId>jacoco-maven-plugin</artifactId>
-                                    <versionRange>[0.5,)</versionRange>
-                                    <goals>
-                                       <!-- Registers goals into m2e. -->
-                                       <goal>prepare-agent</goal>
-                                    </goals>
-                                 </pluginExecutionFilter>
-                                 <action>
-                                    <!-- Ignored to avoid error alerts. -->
-                                    <ignore />
-                                 </action>
-                              </pluginExecution>
-                           </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                        <downloadSources>true</downloadSources>
-                        <downloadJavadocs>true</downloadJavadocs>
-                     </configuration>
-                  </plugin>
-               </plugins>
-            </pluginManagement>
-         </build>
-      </profile>
-      <profile>
-         <!-- Site generation profile. -->
-         <!-- Sets the dependencies for the documentation generation and deployment. -->
-         <id>site</id>
          <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
             <!-- Maven Site -->
             <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom</mavenURL>
             <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=base-pom]]></githubArtifactURL>
          </properties>
+         <distributionManagement>
+            <site>
+               <id>site</id>
+               <name>Project Documentation Site</name>
+               <!-- The URL should be set externally -->
+               <url>${site.url}</url>
+            </site>
+         </distributionManagement>
          <build>
             <plugins>
                <plugin>
@@ -161,43 +128,6 @@
                </plugin>
             </plugins>
          </build>
-      </profile>
-      <profile>
-         <!-- Release deployment profile. -->
-         <!-- Sets the site repository to point to the releases repo. -->
-         <id>deployment-release-pom</id>
-         <distributionManagement>
-            <site>
-               <id>site</id>
-               <name>Project Documentation Site</name>
-               <!-- The URL should be set externally -->
-               <url>${site.release.url}</url>
-            </site>
-         </distributionManagement>
-      </profile>
-      <!-- ============================================== -->
-      <!-- ============ DEPLOYMENT PROFILES ============= -->
-      <!-- ============================================== -->
-      <profile>
-         <!-- Site deployment profile -->
-         <!-- Sets the site repository to point to the releases repo -->
-         <id>deployment-site</id>
-         <activation>
-            <!-- Active by default so the repository appears in the reports -->
-            <activeByDefault>true</activeByDefault>
-         </activation>
-         <properties>
-            <!-- Manifest data -->
-            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
-         </properties>
-         <distributionManagement>
-            <site>
-               <id>site</id>
-               <name>Project Documentation Site</name>
-               <!-- The URL should be set externally -->
-               <url>${site.url}</url>
-            </site>
-         </distributionManagement>
       </profile>
       <profile>
          <!-- Github deployment profile. -->
@@ -320,47 +250,46 @@
       <!-- ============================================== -->
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
-      <plugin.ant.version>3.0.0</plugin.ant.version>
+      <plugin.ant.version>3.1.0</plugin.ant.version>
       <plugin.assembly.version>3.3.0</plugin.assembly.version>
-      <plugin.buildhelp.version>3.2.0</plugin.buildhelp.version>
+      <plugin.buildhelp.version>3.3.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
-      <plugin.clean.version>3.1.0</plugin.clean.version>
-      <plugin.compiler.version>3.8.1</plugin.compiler.version>
-      <plugin.dependency.version>3.2.0</plugin.dependency.version>
+      <plugin.clean.version>3.2.0</plugin.clean.version>
+      <plugin.compiler.version>3.10.1</plugin.compiler.version>
+      <plugin.dependency.version>3.3.0</plugin.dependency.version>
       <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
-      <plugin.enforcer.version>3.0.0</plugin.enforcer.version>
+      <plugin.enforcer.version>3.1.0</plugin.enforcer.version>
       <plugin.failsafe.version>2.22.2</plugin.failsafe.version>
       <plugin.gpg.version>3.0.1</plugin.gpg.version>
       <plugin.install.version>3.0.0-M1</plugin.install.version>
-      <plugin.jacoco.version>0.8.7</plugin.jacoco.version>
-      <plugin.jar.version>3.2.0</plugin.jar.version>
-      <plugin.javadoc.version>3.3.1</plugin.javadoc.version>
+      <plugin.jacoco.version>0.8.8</plugin.jacoco.version>
+      <plugin.jar.version>3.2.2</plugin.jar.version>
+      <plugin.javadoc.version>3.4.0</plugin.javadoc.version>
       <plugin.jdepend.version>2.0</plugin.jdepend.version>
-      <plugin.jxr.version>3.1.1</plugin.jxr.version>
-      <plugin.lifecycle.version>1.0.0</plugin.lifecycle.version>
-      <plugin.pmd.version>3.15.0</plugin.pmd.version>
+      <plugin.jxr.version>3.2.0</plugin.jxr.version>
+      <plugin.pmd.version>3.17.0</plugin.pmd.version>
       <plugin.release.version>3.0.0-M4</plugin.release.version>
-      <plugin.reports.version>3.1.2</plugin.reports.version>
+      <plugin.reports.version>3.3.0</plugin.reports.version>
       <plugin.resources.version>3.2.0</plugin.resources.version>
-      <plugin.site.version>3.10.0</plugin.site.version>
+      <plugin.site.version>3.12.0</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
-      <plugin.spotbugs.version>4.3.0</plugin.spotbugs.version>
+      <plugin.spotbugs.version>4.7.0.0</plugin.spotbugs.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
-      <plugin.taglist.version>2.4</plugin.taglist.version>
-      <plugin.versions.version>2.8.1</plugin.versions.version>
+      <plugin.taglist.version>3.0.0</plugin.taglist.version>
+      <plugin.versions.version>2.11.0</plugin.versions.version>
       <plugin.war.version>3.3.2</plugin.war.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
       <!-- ============================================== -->
-      <extension.wagon.version>3.4.3</extension.wagon.version>
+      <extension.wagon.version>3.5.1</extension.wagon.version>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.2.5</site.skin.version>
+      <site.skin.version>2.2.6</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->

@@ -1,12 +1,10 @@
 # Plugins
 
-The base POM sets up a full set of plugins. These cover most of the common use cases, such as test execution or Javadoc generation, and they all include the latest stable and bug-free version at the time of release.
-
 ## Build plugins
 
-These are used when creating the project artifacts.
+Used when creating the project artifacts.
 
-Some are included in the plugin management as they usually are part of Maven project, even when they are not directly added as dependencies. But otherwise they will work like any other.
+Some are just included in the plugin management, there is no need to include them in the build explicitly.
 
 - [Ant Run](https://maven.apache.org/plugins/maven-antrun-plugin/), can handle Ant scripts.
 - [Assembly](http://maven.apache.org/plugins/maven-assembly-plugin/), uilds a distributable file from all the project components.
@@ -28,7 +26,7 @@ Some are included in the plugin management as they usually are part of Maven pro
 
 ## Report plugins
 
-Some of these may be repeated from the build section. In that case it usually means they will generate a report from wathever they generated during the build process.
+Some of these may be repeated from the build section. Which means they will build a report from artifacts generated during the build process.
 
 - [Changes](https://maven.apache.org/plugins/maven-changes-plugin/), generates the changes report from the changes log.
 - [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/), checks that the source files comply with style standards.
