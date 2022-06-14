@@ -229,6 +229,9 @@
          <action dev="bmg" type="update">
             Updated plugins.
          </action>
+         <action dev="bmg" type="fix">
+            Fixed site deployment.
+         </action>
       </release>
    </body>
 </document>
