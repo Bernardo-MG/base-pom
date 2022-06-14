@@ -1,4 +1,4 @@
-# Parent POMs
+# Base POM
 
 Parent [Maven POM][maven-pom-intro] for common Maven projects. Supports good practices such as unit plus integration testing, or dependency convergence. And this is done without adding any additional dependency to the project, only Maven plugins. This way it is useful for any kind of project, no matter what actual technologies it is based on.
 
