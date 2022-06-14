@@ -225,5 +225,10 @@
             Updated CI config.
          </action>
       </release>
+      <release version="1.5.1" date="2022-06-14" description="Updated plugins">
+         <action dev="bmg" type="update">
+            Updated plugins.
+         </action>
+      </release>
    </body>
 </document>
