@@ -107,15 +107,48 @@
             </pluginManagement>
          </build>
       </profile>
+      <!-- ============================================== -->
+      <!-- ============ DEPLOYMENT PROFILES ============= -->
+      <!-- ============================================== -->
       <profile>
-         <!-- Site generation profile. -->
-         <!-- Sets the dependencies for the documentation generation and deployment. -->
-         <id>site</id>
+         <!-- Site deployment profile -->
+         <!-- Sets the site repository to point to the releases repo -->
+         <id>deployment-site</id>
+         <activation>
+            <!-- Active by default so the repository appears in the reports -->
+            <activeByDefault>true</activeByDefault>
+         </activation>
          <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
             <!-- Maven Site -->
             <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom</mavenURL>
             <githubArtifactURL><![CDATA[https://github.com/Bernardo-MG?tab=packages&amp;repo_name=base-pom]]></githubArtifactURL>
          </properties>
+         <distributionManagement>
+            <site>
+               <id>site</id>
+               <name>Project Documentation Site</name>
+               <!-- The URL should be set externally -->
+               <url>${site.url}</url>
+            </site>
+         </distributionManagement>
+      </profile>
+      <profile>
+         <!-- Github deployment profile. -->
+         <id>deployment-github</id>
+         <properties>
+            <!-- Manifest data -->
+            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
+         </properties>
+         <distributionManagement>
+            <repository>
+               <!-- Github repository -->
+               <id>github</id>
+               <name>GitHub Packages</name>
+               <url>https://maven.pkg.github.com/Bernardo-MG/base-pom</url>
+            </repository>
+         </distributionManagement>
          <build>
             <plugins>
                <plugin>
@@ -161,46 +194,6 @@
                </plugin>
             </plugins>
          </build>
-      </profile>
-      <!-- ============================================== -->
-      <!-- ============ DEPLOYMENT PROFILES ============= -->
-      <!-- ============================================== -->
-      <profile>
-         <!-- Site deployment profile -->
-         <!-- Sets the site repository to point to the releases repo -->
-         <id>deployment-site</id>
-         <activation>
-            <!-- Active by default so the repository appears in the reports -->
-            <activeByDefault>true</activeByDefault>
-         </activation>
-         <properties>
-            <!-- Manifest data -->
-            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
-         </properties>
-         <distributionManagement>
-            <site>
-               <id>site</id>
-               <name>Project Documentation Site</name>
-               <!-- The URL should be set externally -->
-               <url>${site.url}</url>
-            </site>
-         </distributionManagement>
-      </profile>
-      <profile>
-         <!-- Github deployment profile. -->
-         <id>deployment-github</id>
-         <properties>
-            <!-- Manifest data -->
-            <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
-         </properties>
-         <distributionManagement>
-            <repository>
-               <!-- Github repository -->
-               <id>github</id>
-               <name>GitHub Packages</name>
-               <url>https://maven.pkg.github.com/Bernardo-MG/base-pom</url>
-            </repository>
-         </distributionManagement>
       </profile>
       <profile>
          <!-- OSSRH deployment profile. -->

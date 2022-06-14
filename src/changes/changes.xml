@@ -225,5 +225,7 @@
             Updated CI config.
          </action>
       </release>
+      <release version="1.6.0" date="2022-01-09" description="">
+      </release>
    </body>
 </document>
