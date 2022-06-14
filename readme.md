@@ -1,8 +1,6 @@
 # Base POM
 
-Parent [Maven POM][maven-pom-intro] setting up a Maven project for common usage, taking advantage of several plugins, and supporting good practices such as unit and integration testing, or dependency convergence.
-
-This is a generic base POM, useful for any kind of project, no matter what actual technologies they are based on, and will add no dependency, apart from the plugins.
+Parent [Maven POM][maven-pom-intro] for common Maven projects. Supports good practices such as unit plus integration testing, or dependency convergence. And this is done without adding any additional dependency to the project, only Maven plugins. This way it is useful for any kind of project, no matter what actual technologies it is based on.
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven/base-pom.svg)][maven-repo]
 
@@ -11,12 +9,17 @@ This is a generic base POM, useful for any kind of project, no matter what actua
 
 ## Features
 
-- Reduces initial configuration for Maven-based Java projects.
-- Sets up the encoding and Java version of the project.
+- Build validation.
+- Maven Site reports added for the project.
 - Common build and report plugins.
-- Validation rules, including dependency convergence.
-- Basic configuration, such as a default manifest file.
+- Deployment plugin prepared to deploy into the distribution management repo.
+- Manifest prepared with default configuration.
+- Sets the JDK version to be used by the project.
 - Sets the project default encoding to UTF-8.
+
+## Example
+
+The [Library Maven Archetype][library-archetype] makes use of this POM. And extends it. This is an easy way to check how the POM can be used and modified.
 
 ## Documentation
 
@@ -36,11 +39,7 @@ mvn site -P deployment-site
 
 ## Usage
 
-The application is a XML file, a Maven POM file.
-
-### Installing
-
-The POM can be used by just adding the following lines to the Maven POM for your project:
+Use as a parent POM on any Maven project:
 
 ```
 <parent>
@@ -49,6 +48,8 @@ The POM can be used by just adding the following lines to the Maven POM for your
     <version>(Check POM or badges)</version>
 </parent>
 ```
+
+### Installing
 
 If needed, the project can be added to the local Maven repository with the following command:
 
@@ -76,6 +77,7 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 The project has been released under the [MIT License][license].
 
 [maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
+[library-archetype]: https://github.com/Bernardo-MG/library-maven-archetype
 
 [maven-repo]: http://mvnrepository.com/artifact/com.bernardomg.maven/base-pom
 [issues]: https://github.com/Bernardo-MG/base-pom/issues

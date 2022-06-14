@@ -1,10 +1,6 @@
 # Parent POMs
 
-Parent [Maven POM][maven-pom-intro] files take care of setting up common configuration which can be inherited by any Maven project.
-
-In this case it prepares several build and report plugins for the project, and also sets it up with a configuration based on various good practices, such as testing or dependency convergence.
-
-But above all it is meant to be a generic base POM, useful for any kind of project, no matter what actual technologies they are based on.
+Parent [Maven POM][maven-pom-intro] for common Maven projects. Supports good practices such as unit plus integration testing, or dependency convergence. And this is done without adding any additional dependency to the project, only Maven plugins. This way it is useful for any kind of project, no matter what actual technologies it is based on.
 
 ## Features
 
@@ -14,15 +10,15 @@ But above all it is meant to be a generic base POM, useful for any kind of proje
 - Deployment plugin prepared to deploy into the distribution management repo.
 - Manifest prepared with default configuration.
 - Sets the JDK version to be used by the project.
-- Sets the encoding (UTF-8 by default) for all the project.
+- Sets the project default encoding to UTF-8.
 
 ## Dependencies
 
-The only dependencies included in the POM are the Maven plugins. No additional dependency is added.
+No Maven dependency is included in the POM, only Maven plugins.
 
-## Archetype using the POM
+## Example
 
-The [Library Maven Archetype][library-archetype] makes use of the base POM, and also extends over it, when generating a new project. It is a useful way to check how the POM can be used and modified.
+The [Library Maven Archetype][library-archetype] makes use of this POM. And extends it. This is an easy way to check how the POM can be used and modified.
 
 [maven-pom-intro]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
 
