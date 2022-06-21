@@ -241,5 +241,7 @@
             Updated Checkstyle library used by the plugin.
          </action>
       </release>
+      <release version="1.6.0" date="2022-06-21" description="">
+      </release>
    </body>
 </document>
