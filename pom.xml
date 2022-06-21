@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
    <modelVersion>4.0.0</modelVersion>
 
@@ -14,7 +13,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.5.1</version>
+   <version>1.5.2</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -255,6 +254,7 @@
       <plugin.buildhelp.version>3.3.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
+      <plugin.checkstyle.lib.version>10.3</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.2.0</plugin.clean.version>
       <plugin.compiler.version>3.10.1</plugin.compiler.version>
       <plugin.dependency.version>3.3.0</plugin.dependency.version>
@@ -266,7 +266,6 @@
       <plugin.jacoco.version>0.8.8</plugin.jacoco.version>
       <plugin.jar.version>3.2.2</plugin.jar.version>
       <plugin.javadoc.version>3.4.0</plugin.javadoc.version>
-      <plugin.jdepend.version>2.0</plugin.jdepend.version>
       <plugin.jxr.version>3.2.0</plugin.jxr.version>
       <plugin.pmd.version>3.17.0</plugin.pmd.version>
       <plugin.release.version>3.0.0-M4</plugin.release.version>
@@ -342,7 +341,6 @@
             <plugin>
                <!-- Checkstyle -->
                <!-- Checks that the source files comply with style standards. -->
-               <!-- It is using a customized rules file -->
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-checkstyle-plugin</artifactId>
                <version>${plugin.checkstyle.version}</version>
@@ -422,13 +420,6 @@
                <!-- Handles the Javadocs. -->
                <artifactId>maven-javadoc-plugin</artifactId>
                <version>${plugin.javadoc.version}</version>
-            </plugin>
-            <plugin>
-               <!-- JDepend -->
-               <!-- Generates the dependencies report. -->
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>jdepend-maven-plugin</artifactId>
-               <version>${plugin.jdepend.version}</version>
             </plugin>
             <plugin>
                <!-- JXR -->
@@ -718,6 +709,19 @@
                </execution>
             </executions>
          </plugin>
+         <plugin>
+            <!-- Checkstyle -->
+            <!-- Checks that the source files comply with style standards. -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <dependencies>
+               <dependency>
+                  <groupId>com.puppycrawl.tools</groupId>
+                  <artifactId>checkstyle</artifactId>
+                  <version>${plugin.checkstyle.lib.version}</version>
+               </dependency>
+            </dependencies>
+         </plugin>
       </plugins>
    </build>
 
@@ -870,12 +874,6 @@
             <!-- Generates coverage reports from Surefire and Failsafe. -->
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
-         </plugin>
-         <plugin>
-            <!-- JDepend -->
-            <!-- Generates the dependencies report. -->
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jdepend-maven-plugin</artifactId>
          </plugin>
          <plugin>
             <!-- SpotBugs -->
