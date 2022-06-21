@@ -214,8 +214,8 @@
             Updated plugins.
          </action>
       </release>
-      <release version="1.5.0" date="2022-01-09" description="Dropped JDK 8">
-         <action dev="bmg" type="update">
+      <release version="1.5.0" date="2022-06-14" description="Dropped JDK 8">
+         <action dev="bmg" type="remove">
             Dropped support for JDK 8.
          </action>
          <action dev="bmg" type="update">
@@ -225,7 +225,13 @@
             Updated CI config.
          </action>
       </release>
-      <release version="1.6.0" date="2022-01-09" description="">
+      <release version="1.5.2" date="2022-06-21" description="Report updates">
+         <action dev="bmg" type="remove">
+            Removed JDepend report.
+         </action>
+         <action dev="bmg" type="update">
+            Updated Checkstyle library used by the plugin.
+         </action>
       </release>
    </body>
 </document>
