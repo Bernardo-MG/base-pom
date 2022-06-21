@@ -214,7 +214,7 @@
             Updated plugins.
          </action>
       </release>
-      <release version="1.5.0" date="2022-06-14" description="Dropped JDK 8">
+      <release version="1.5.0" date="2022-01-09" description="Dropped JDK 8">
          <action dev="bmg" type="remove">
             Dropped support for JDK 8.
          </action>
@@ -223,6 +223,14 @@
          </action>
          <action dev="bmg" type="update">
             Updated CI config.
+         </action>
+      </release>
+      <release version="1.5.1" date="2022-06-14" description="Updated plugins">
+         <action dev="bmg" type="update">
+            Updated plugins.
+         </action>
+         <action dev="bmg" type="fix">
+            Fixed site deployment.
          </action>
       </release>
       <release version="1.5.2" date="2022-06-21" description="Report updates">
