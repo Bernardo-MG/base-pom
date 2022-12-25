@@ -250,33 +250,33 @@
       <!-- ============== PLUGINS VERSIONS ============== -->
       <!-- ============================================== -->
       <plugin.ant.version>3.1.0</plugin.ant.version>
-      <plugin.assembly.version>3.3.0</plugin.assembly.version>
+      <plugin.assembly.version>3.4.2</plugin.assembly.version>
       <plugin.buildhelp.version>3.3.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
-      <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
-      <plugin.checkstyle.lib.version>10.3</plugin.checkstyle.lib.version>
+      <plugin.checkstyle.version>3.2.0</plugin.checkstyle.version>
+      <plugin.checkstyle.lib.version>10.5.0</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.2.0</plugin.clean.version>
       <plugin.compiler.version>3.10.1</plugin.compiler.version>
       <plugin.dependency.version>3.3.0</plugin.dependency.version>
-      <plugin.deploy.version>3.0.0-M1</plugin.deploy.version>
+      <plugin.deploy.version>3.0.0</plugin.deploy.version>
       <plugin.enforcer.version>3.1.0</plugin.enforcer.version>
       <plugin.failsafe.version>2.22.2</plugin.failsafe.version>
       <plugin.gpg.version>3.0.1</plugin.gpg.version>
-      <plugin.install.version>3.0.0-M1</plugin.install.version>
+      <plugin.install.version>3.0.1</plugin.install.version>
       <plugin.jacoco.version>0.8.8</plugin.jacoco.version>
-      <plugin.jar.version>3.2.2</plugin.jar.version>
-      <plugin.javadoc.version>3.4.0</plugin.javadoc.version>
-      <plugin.jxr.version>3.2.0</plugin.jxr.version>
-      <plugin.pmd.version>3.17.0</plugin.pmd.version>
+      <plugin.jar.version>3.3.0</plugin.jar.version>
+      <plugin.javadoc.version>3.4.1</plugin.javadoc.version>
+      <plugin.jxr.version>3.3.0</plugin.jxr.version>
+      <plugin.pmd.version>3.19.0</plugin.pmd.version>
       <plugin.release.version>3.0.0-M4</plugin.release.version>
-      <plugin.reports.version>3.3.0</plugin.reports.version>
-      <plugin.resources.version>3.2.0</plugin.resources.version>
-      <plugin.site.version>3.12.0</plugin.site.version>
+      <plugin.reports.version>3.4.1</plugin.reports.version>
+      <plugin.resources.version>3.3.0</plugin.resources.version>
+      <plugin.site.version>3.12.1</plugin.site.version>
       <plugin.source.version>3.2.1</plugin.source.version>
-      <plugin.spotbugs.version>4.7.0.0</plugin.spotbugs.version>
+      <plugin.spotbugs.version>4.7.3.0</plugin.spotbugs.version>
       <plugin.surefire.version>2.22.2</plugin.surefire.version>
       <plugin.taglist.version>3.0.0</plugin.taglist.version>
-      <plugin.versions.version>2.11.0</plugin.versions.version>
+      <plugin.versions.version>2.13.0</plugin.versions.version>
       <plugin.war.version>3.3.2</plugin.war.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
@@ -288,7 +288,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.2.6</site.skin.version>
+      <site.skin.version>2.2.7</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
