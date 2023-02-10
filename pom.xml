@@ -254,7 +254,7 @@
       <plugin.buildhelp.version>3.3.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.2.0</plugin.checkstyle.version>
-      <plugin.checkstyle.lib.version>10.5.0</plugin.checkstyle.lib.version>
+      <plugin.checkstyle.lib.version>10.7.0</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.2.0</plugin.clean.version>
       <plugin.compiler.version>3.10.1</plugin.compiler.version>
       <plugin.dependency.version>3.3.0</plugin.dependency.version>
@@ -288,7 +288,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.3.0</site.skin.version>
+      <site.skin.version>2.3.1</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
