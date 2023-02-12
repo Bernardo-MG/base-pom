@@ -239,6 +239,8 @@
       <java.version>11</java.version>
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+      <plugin.enforcer.requireJavaVersion.jdk>${java.version}</plugin.enforcer.requireJavaVersion.jdk>
+      <plugin.enforcer.requireJavaVersion.pattern>[${plugin.enforcer.requireJavaVersion.jdk},)</plugin.enforcer.requireJavaVersion.pattern>
       <!-- ============================================== -->
       <!-- ============= COMPILER WARNINGS ============== -->
       <!-- ============================================== -->
@@ -547,7 +549,7 @@
                      <rules>
                         <!-- Not obsolete JDK. -->
                         <requireJavaVersion>
-                           <version>[${java.version},)</version>
+                           <version>${plugin.enforcer.requireJavaVersion.pattern}</version>
                         </requireJavaVersion>
                      </rules>
                   </configuration>
