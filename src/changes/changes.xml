@@ -251,5 +251,10 @@
             Updated plugins.
          </action>
       </release>
+      <release version="1.5.5" date="2023-09-28" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
    </body>
 </document>
