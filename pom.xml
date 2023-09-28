@@ -852,18 +852,6 @@
             <!-- Checks that the code complies with a series of code quality rules. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-pmd-plugin</artifactId>
-            <configuration>
-               <linkXref>true</linkXref>
-               <!-- This will generate always the report, even if empty -->
-               <skipEmptyReport>false</skipEmptyReport>
-               <excludes>
-                  <exclude>**/*Bean.java</exclude>
-                  <exclude>**/generated/*.java</exclude>
-               </excludes>
-               <excludeRoots>
-                  <excludeRoot>target/generated-sources/stubs</excludeRoot>
-               </excludeRoots>
-            </configuration>
          </plugin>
          <plugin>
             <!-- Surefire report -->
