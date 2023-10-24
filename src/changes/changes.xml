@@ -256,7 +256,10 @@
             Updated dependencies.
          </action>
       </release>
-      <release version="2.0.0" date="2023-09-28" description="">
+      <release version="1.5.6" date="2023-10-25" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
       </release>
    </body>
 </document>
