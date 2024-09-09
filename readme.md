@@ -21,22 +21,6 @@ Parent [Maven POM][maven-pom-intro] for common Maven projects. Supports good pra
 
 The [Library Maven Archetype][library-archetype] makes use of this POM. And extends it. This is an easy way to check how the POM can be used and modified.
 
-## Documentation
-
-Documentation is always generated for the latest release, kept in the 'master' branch:
-
-- The [latest release documentation page][site-release].
-
-Documentation is also generated from the latest snapshot, taken from the 'develop' branch:
-
-- The [the latest snapshot documentation page][site-develop].
-
-The documentation site sources come along the source code (as it is a Maven site), so it is always possible to generate them using the following Maven command:
-
-```
-mvn site -P deployment-site
-```
-
 ## Usage
 
 Use as a parent POM on any Maven project:
@@ -83,5 +67,3 @@ The project has been released under the [MIT License][license].
 [issues]: https://github.com/Bernardo-MG/base-pom/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: https://github.com/Bernardo-MG/base-pom
-[site-develop]: https://docs.bernardomg.com/development/maven/base-pom
-[site-release]: https://docs.bernardomg.com/maven/base-pom
