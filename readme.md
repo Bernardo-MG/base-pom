@@ -4,9 +4,6 @@ Parent [Maven POM][maven-pom-intro] for common Maven projects. Supports good pra
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven/base-pom.svg)][maven-repo]
 
-[![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
-[![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
-
 ## Features
 
 - Build validation.
