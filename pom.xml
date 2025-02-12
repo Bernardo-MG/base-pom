@@ -255,7 +255,7 @@
       <plugin.assembly.version>3.7.1</plugin.assembly.version>
       <plugin.buildhelp.version>3.6.0</plugin.buildhelp.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
-      <plugin.checkstyle.version>3.5.0</plugin.checkstyle.version>
+      <plugin.checkstyle.version>3.6.0</plugin.checkstyle.version>
       <plugin.checkstyle.lib.version>10.18.1</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.4.0</plugin.clean.version>
       <plugin.compiler.version>3.13.0</plugin.compiler.version>
@@ -273,7 +273,7 @@
       <plugin.release.version>3.1.1</plugin.release.version>
       <plugin.reports.version>3.7.0</plugin.reports.version>
       <plugin.resources.version>3.3.1</plugin.resources.version>
-      <plugin.site.version>3.20.0</plugin.site.version>
+      <plugin.site.version>3.21.0</plugin.site.version>
       <plugin.source.version>3.3.1</plugin.source.version>
       <plugin.spotbugs.version>4.8.6.3</plugin.spotbugs.version>
       <plugin.surefire.version>3.5.0</plugin.surefire.version>
