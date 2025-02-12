@@ -266,5 +266,10 @@
             Updated dependencies.
          </action>
       </release>
+      <release version="1.5.8" date="2025-02-12" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
    </body>
 </document>
