@@ -276,5 +276,15 @@
             Updated dependencies.
          </action>
       </release>
+      <release version="1.5.10" date="2025-06-10" description="Updated deployment">
+         <action dev="bmg" type="update">
+            Added Maven Central deployment plugin.
+         </action>
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
+      <release version="1.6.0" date="2025-06-10" description="">
+      </release>
    </body>
 </document>
