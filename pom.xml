@@ -13,7 +13,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.5.9</version>
+   <version>1.5.10</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -168,7 +168,6 @@
             <plugins>
                <plugin>
                   <!-- GPG -->
-                  <!-- Signs the artifacts -->
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-gpg-plugin</artifactId>
                   <executions>
@@ -186,6 +185,17 @@
                         <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
                      </gpgArguments>
+                  </configuration>
+               </plugin>
+               <plugin>
+                  <!-- Maven Central publishing -->
+                  <groupId>org.sonatype.central</groupId>
+                  <artifactId>central-publishing-maven-plugin</artifactId>
+                  <extensions>true</extensions>
+                  <configuration>
+                     <publishingServerId>central</publishingServerId>
+                     <autoPublish>true</autoPublish>
+                     <waitUntil>published</waitUntil>
                   </configuration>
                </plugin>
             </plugins>
@@ -254,11 +264,12 @@
       <!-- ============================================== -->
       <plugin.ant.version>3.1.0</plugin.ant.version>
       <plugin.assembly.version>3.7.1</plugin.assembly.version>
-      <plugin.buildhelp.version>3.6.0</plugin.buildhelp.version>
+      <plugin.buildhelp.version>3.6.1</plugin.buildhelp.version>
+      <plugin.central.version>0.7.0</plugin.central.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.6.0</plugin.checkstyle.version>
       <plugin.checkstyle.lib.version>10.18.1</plugin.checkstyle.lib.version>
-      <plugin.clean.version>3.4.1</plugin.clean.version>
+      <plugin.clean.version>3.5.0</plugin.clean.version>
       <plugin.compiler.version>3.14.0</plugin.compiler.version>
       <plugin.dependency.version>3.8.1</plugin.dependency.version>
       <plugin.deploy.version>3.1.4</plugin.deploy.version>
@@ -528,6 +539,13 @@
                      </manifestEntries>
                   </archive>
                </configuration>
+            </plugin>
+            <plugin>
+               <!-- Maven Central publishing -->
+               <!-- Publishes the project into Sonatype Maven Central. -->
+               <groupId>org.sonatype.central</groupId>
+               <artifactId>central-publishing-maven-plugin</artifactId>
+               <version>${plugin.central.version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
