@@ -145,25 +145,12 @@
          </distributionManagement>
       </profile>
       <profile>
-         <!-- OSSRH deployment profile. -->
-         <id>deployment-ossrh</id>
+         <!-- Central deployment profile. -->
+         <id>deployment-central</id>
          <properties>
             <!-- Manifest data -->
             <manifest.name>com/bernardomg/maven/pom/base</manifest.name>
          </properties>
-         <distributionManagement>
-            <repository>
-               <!-- OSSRH repository -->
-               <id>ossrh</id>
-               <name>Central Repository OSSRH</name>
-               <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            </repository>
-            <snapshotRepository>
-               <!-- OSSRH snapshots repository -->
-               <id>ossrh</id>
-               <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            </snapshotRepository>
-         </distributionManagement>
          <build>
             <plugins>
                <plugin>
