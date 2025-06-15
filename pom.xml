@@ -13,7 +13,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.5.10</version>
+   <version>1.6.0-SNAPSHOT</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -255,7 +255,7 @@
       <plugin.central.version>0.7.0</plugin.central.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.6.0</plugin.checkstyle.version>
-      <plugin.checkstyle.lib.version>10.18.1</plugin.checkstyle.lib.version>
+      <plugin.checkstyle.lib.version>10.25.0</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.5.0</plugin.clean.version>
       <plugin.compiler.version>3.14.0</plugin.compiler.version>
       <plugin.dependency.version>3.8.1</plugin.dependency.version>
@@ -289,7 +289,7 @@
       <!-- Relativizing the Maven Site links has a tendency to break them -->
       <relativizeDecorationLinks>false</relativizeDecorationLinks>
       <!-- Skin version -->
-      <site.skin.version>2.3.3</site.skin.version>
+      <site.skin.version>2.4.1</site.skin.version>
    </properties>
 
    <!-- ********************************************** -->
@@ -864,6 +864,9 @@
             <!-- Generates the unit tests report. -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
+            <configuration>
+               <alwaysGenerateFailsafeReport>true</alwaysGenerateFailsafeReport>
+            </configuration>
          </plugin>
          <plugin>
             <!-- JaCoCo -->
