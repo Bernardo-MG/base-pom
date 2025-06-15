@@ -255,7 +255,7 @@
       <plugin.central.version>0.7.0</plugin.central.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.6.0</plugin.checkstyle.version>
-      <plugin.checkstyle.lib.version>10.18.1</plugin.checkstyle.lib.version>
+      <plugin.checkstyle.lib.version>10.25.0</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.5.0</plugin.clean.version>
       <plugin.compiler.version>3.14.0</plugin.compiler.version>
       <plugin.dependency.version>3.8.1</plugin.dependency.version>
