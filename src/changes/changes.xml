@@ -284,7 +284,13 @@
             Updated dependencies.
          </action>
       </release>
-      <release version="1.6.0" date="2025-06-10" description="">
+      <release version="1.5.11" date="2025-06-10" description="Small corrections">
+         <action dev="bmg" type="fix">
+            Always generate failsafe report.
+         </action>
+         <action dev="bmg" type="update">
+            Updated checkstyle.
+         </action>
       </release>
    </body>
 </document>
