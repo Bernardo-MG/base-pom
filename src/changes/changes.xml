@@ -292,5 +292,10 @@
             Updated checkstyle.
          </action>
       </release>
+      <release version="1.5.12" date="2025-10-28" description="Updated dependencies">
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
+      </release>
    </body>
 </document>
