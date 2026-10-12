@@ -19,6 +19,7 @@ jobs:
     - name: Deploy to Github
       uses: bernardo-mg/maven-github-deployment-action@v1
       with:
+        maven-version: '3.9.16'
         token: ${{ secrets.GITHUB_TOKEN }}
         jdk: 21
 
@@ -34,6 +35,7 @@ jobs:
     - name: Deploy
       uses: bernardo-mg/maven-signed-deployment-action@v1
       with:
+        maven-version: '3.9.16'
         username: ${{ secrets.CENTRAL_USERNAME }}
         password: ${{ secrets.CENTRAL_TOKEN }}
         gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
