@@ -20,7 +20,7 @@ jobs:
       uses: bernardo-mg/maven-github-deployment-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        jdk: 17
+        jdk: 21
 
   central:
     name: Central deployment
@@ -38,4 +38,4 @@ jobs:
         password: ${{ secrets.CENTRAL_TOKEN }}
         gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
         gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-        jdk: 17
+        jdk: 21

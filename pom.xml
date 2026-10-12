@@ -13,7 +13,7 @@
 
    <groupId>com.bernardomg.maven</groupId>
    <artifactId>base-pom</artifactId>
-   <version>1.5.13</version>
+   <version>1.5.14</version>
    <packaging>pom</packaging>
 
    <name>Base POM</name>
@@ -232,7 +232,7 @@
       <!-- ============================================== -->
       <!-- ================ JAVA VERSION ================ -->
       <!-- ============================================== -->
-      <java.version>17</java.version>
+      <java.version>21</java.version>
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
       <maven.compiler.release>${maven.compiler.source}</maven.compiler.release>
@@ -250,33 +250,33 @@
       <!-- ============================================== -->
       <plugin.ant.version>3.2.0</plugin.ant.version>
       <plugin.assembly.version>3.8.0</plugin.assembly.version>
-      <plugin.buildhelp.version>3.6.1</plugin.buildhelp.version>
-      <plugin.central.version>0.10.0</plugin.central.version>
+      <plugin.buildhelp.version>3.6.2</plugin.buildhelp.version>
+      <plugin.central.version>0.11.0</plugin.central.version>
       <plugin.changes.version>2.12.1</plugin.changes.version>
       <plugin.checkstyle.version>3.6.0</plugin.checkstyle.version>
-      <plugin.checkstyle.lib.version>13.3.0</plugin.checkstyle.lib.version>
+      <plugin.checkstyle.lib.version>14.3.0</plugin.checkstyle.lib.version>
       <plugin.clean.version>3.5.0</plugin.clean.version>
-      <plugin.compiler.version>3.15.0</plugin.compiler.version>
-      <plugin.dependency.version>3.10.0</plugin.dependency.version>
-      <plugin.deploy.version>3.1.4</plugin.deploy.version>
-      <plugin.enforcer.version>3.6.2</plugin.enforcer.version>
-      <plugin.failsafe.version>3.5.5</plugin.failsafe.version>
+      <plugin.compiler.version>3.16.0</plugin.compiler.version>
+      <plugin.dependency.version>3.11.0</plugin.dependency.version>
+      <plugin.deploy.version>3.2.0</plugin.deploy.version>
+      <plugin.enforcer.version>3.6.3</plugin.enforcer.version>
+      <plugin.failsafe.version>3.6.0</plugin.failsafe.version>
       <plugin.gpg.version>3.2.8</plugin.gpg.version>
-      <plugin.install.version>3.1.4</plugin.install.version>
-      <plugin.jacoco.version>0.8.14</plugin.jacoco.version>
-      <plugin.jar.version>3.5.0</plugin.jar.version>
+      <plugin.install.version>3.2.0</plugin.install.version>
+      <plugin.jacoco.version>0.8.15</plugin.jacoco.version>
+      <plugin.jar.version>3.5.1</plugin.jar.version>
       <plugin.javadoc.version>3.12.0</plugin.javadoc.version>
       <plugin.jxr.version>3.6.0</plugin.jxr.version>
       <plugin.pmd.version>3.28.0</plugin.pmd.version>
       <plugin.release.version>3.3.1</plugin.release.version>
       <plugin.reports.version>3.9.0</plugin.reports.version>
       <plugin.resources.version>3.5.0</plugin.resources.version>
-      <plugin.site.version>3.21.0</plugin.site.version>
+      <plugin.site.version>3.22.0</plugin.site.version>
       <plugin.source.version>3.4.0</plugin.source.version>
-      <plugin.spotbugs.version>4.9.8.2</plugin.spotbugs.version>
-      <plugin.surefire.version>3.5.5</plugin.surefire.version>
-      <plugin.taglist.version>3.2.2</plugin.taglist.version>
-      <plugin.versions.version>2.21.0</plugin.versions.version>
+      <plugin.spotbugs.version>4.10.5.0</plugin.spotbugs.version>
+      <plugin.surefire.version>3.6.0</plugin.surefire.version>
+      <plugin.taglist.version>3.2.3</plugin.taglist.version>
+      <plugin.versions.version>2.23.0</plugin.versions.version>
       <plugin.war.version>3.5.1</plugin.war.version>
       <!-- ============================================== -->
       <!-- ============= EXTENSIONS VERSIONS ============ -->
