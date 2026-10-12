@@ -297,7 +297,13 @@
             Updated dependencies.
          </action>
       </release>
-      <release version="1.6.0" date="2025-10-28" description="">
+      <release version="1.5.13" date="2026-03-18" description="Deployment won't wait">
+         <action dev="bmg" type="update">
+            Deployment won't wait until publish.
+         </action>
+         <action dev="bmg" type="update">
+            Updated dependencies.
+         </action>
       </release>
    </body>
 </document>
